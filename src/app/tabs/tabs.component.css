@@ -1,0 +1,49 @@
+.mi-color {
+    background-color: #9D2449; 
+    color: white;
+  }
+
+  .BOTONCENTRO {
+    background-color: #9D2449; 
+    color: white;
+width: 500px; /* Ancho personalizado */
+  height: 50px; /* Altura personalizada */
+  border-color: #9D2411;
+  display: block;
+  margin: 0 auto;
+ 
+  }
+
+  .pestanas {
+    display: flex;
+}
+
+.pestanas button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.pestanas button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Contenido de las pestañas */
+.contenido-pestanas {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Ocultar todo el contenido de las pestañas por defecto */
+.contenido-pestanas > div {
+    display: none;
+}
+
+/* Mostrar solo el contenido de la pestaña activa */
+.contenido-pestanas > div.activo {
+    display: block;
+}

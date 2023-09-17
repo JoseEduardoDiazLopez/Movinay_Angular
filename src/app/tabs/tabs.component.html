@@ -1,0 +1,185 @@
+<div class="tabs">
+    <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Pestaña 1</button>
+    <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Pestaña 2</button>
+    <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Pestaña 3</button>
+  </div>
+  
+  <div class="contenido">
+    <div [hidden]="tabActiva !== 0">
+        <div class="container mt-4">
+
+            <div class="card">
+              <div class="card-header mi-color">
+                <h5 class="card-title">1. Informacion de la cita</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <!-- Combo Box para la Entidad Federativa -->
+                  <div class="form-group">
+                    <label for="entidadFederativa">Entidad Federativa:</label>
+                    <select class="form-control " id="entidadFederativa" name="entidadFederativa">
+                      <option value="entidad1">Nayarit</option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+          
+                  <!-- Combo Box para el Municipio -->
+                  <div class="form-group">
+                    <label for="municipio">Municipio:</label>
+                    <select class="form-control" id="municipio" name="municipio">
+                      <option value="municipio1">Municipio 1</option>
+                      <option value="municipio2">Municipio 2</option>
+                   
+                    </select>
+                  </div>
+          
+                  <!-- Combo Box para el Módulo -->
+                  <div class="form-group">
+                    <label for="moduloCita">Módulo:</label>
+                    <select class="form-control" id="moduloCita" name="moduloCita">
+                      <option value="modulo1">Módulo 1</option>
+                      <option value="modulo2">Módulo 2</option>
+                 
+                    </select>
+                  </div>
+          
+                  <!-- Selector de Fecha -->
+                  <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha">
+                  </div>
+          
+                  <!-- Combo Box para la Hora -->
+                  <div class="form-group">
+                    <label for="horaCita">Hora:</label>
+                    <select class="form-control" id="horaCita" name="horaCita">
+                      <option value="hora1">Hora 1</option>
+                      <option value="hora2">Hora 2</option>
+                     
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          
+            <!-- Sección 2 - Documentos -->
+            <div class="card mt-4">
+              <div class="card-header mi-color">
+                <h5 class="card-title">2. Documentos</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <!-- Combo Box para el tipo de trámite -->
+                  <div class="form-group">
+                    <label for="tipoTramite">Trámite a realizar</label>
+                    <select class="form-control" id="tipoTramite" name="tipoTramite">
+                      <option value="tramite1">Pago De tenencia</option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+          
+                  <!-- Combo Box para el documento de nacionalidad -->
+                  <div class="form-group">
+                    <label for="documentoNacionalidad">Documento de nacionalidad:</label>
+                    <select class="form-control" id="documentoNacionalidad" name="documentoNacionalidad">
+                      <option value="doc1">Acta de nacimiento</option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+          
+                  <!-- Combo Box para el documento de identidad con fotografía -->
+                  <div class="form-group">
+                    <label for="documentoIdentidad">Documento de identidad con fotografía:</label>
+                    <select class="form-control" id="documentoIdentidad" name="documentoIdentidad">
+                      <option value="foto1">Pasaporte</option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+          
+                  <!-- Combo Box para el comprobante de domicilio -->
+                  <div class="form-group">
+                    <label for="comprobanteDomicilio">Comprobante de domicilio:</label>
+                    <select class="form-control" id="comprobanteDomicilio" name="comprobanteDomicilio">
+                      <option value="comprobante1">Recibo de luz</option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+          
+            <!-- Sección 3 - Datos Personales -->
+            <div class="card mt-4">
+              <div class="card-header mi-color">
+                <h5 class="card-title">3. Datos Personales</h5>
+              </div>
+              <div class="card-body">
+                <form>
+                  <!-- Primera fila -->
+                  <div class="row">
+                    <!-- Campo 1 - Nombre -->
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                      </div>
+                    </div>
+          
+                    <!-- Campo 2 - Apellido Paterno -->
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="apellidoPaterno">Apellido Paterno:</label>
+                        <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno">
+                      </div>
+                    </div>
+          
+                    <!-- Campo 3 - Apellido Materno -->
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="apellidoMaterno">Apellido Materno:</label>
+                        <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno">
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Segunda fila -->
+                  <div class="row">
+                    <!-- Campo 4 - Número de Teléfono -->
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono">
+                      </div>
+                    </div>
+          
+                    <!-- Campo 5 - Correo Electrónico -->
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" class="form-control" id="correo" name="correo">
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Botón de Envío -->
+              <br>
+              <button type="submit" class="btn btn-primary BOTONCENTRO">Agendar Cita ya</button>
+            </form>
+          </div>
+      
+       
+    </div>
+    
+    </div>
+      
+    </div>
+    <div [hidden]="tabActiva !== 1">
+      <h2>Contenido de la Pestaña 2</h2>
+      <p>Este es el contenido de la segunda pestaña.</p>
+    </div>
+    <div [hidden]="tabActiva !== 2">
+      <h2>Contenido de la Pestaña 3</h2>
+      <p>Este es el contenido de la tercera pestaña.</p>
+    </div>
+  </div>
+  
