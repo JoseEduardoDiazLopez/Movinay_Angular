@@ -103,8 +103,9 @@ header{
     height: 40px;
 }
 .banner{
-    width: 1235px;
+    width: 1364px;
     height: 400px;
     position: relative;
     margin-top: -360px;
+    left: 1px;
 }
