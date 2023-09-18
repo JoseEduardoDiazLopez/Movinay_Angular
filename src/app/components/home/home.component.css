@@ -102,3 +102,9 @@ header{
 .logo2{
     height: 40px;
 }
+.banner{
+    width: 1235px;
+    height: 400px;
+    position: relative;
+    margin-top: -360px;
+}
