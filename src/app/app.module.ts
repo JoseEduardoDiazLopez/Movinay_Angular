@@ -7,7 +7,6 @@ import { HomeComponent } from './components/home/home.component';
 import { CitasCComponent } from './components/citas-c/citas-c.component';
 import { TabsComponent } from './tabs/tabs.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
