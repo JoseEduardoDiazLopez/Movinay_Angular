@@ -111,5 +111,7 @@ header{
 }
 .image_one{
   position: relative;
-  right: -30px;
+  right: -90px;
+  border-radius: 25px;
+  border: 2px solid #ba8f56;
 }
