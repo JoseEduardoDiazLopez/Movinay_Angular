@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import {fromEvent,of} from 'rxjs'
 import {map,startWith} from 'rxjs/operators'
@@ -8,7 +8,6 @@ import {map,startWith} from 'rxjs/operators'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  
   constructor() { }
     menu_icon_variable: boolean = false;
     menuVariable: boolean = false;

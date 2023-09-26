@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CitasCComponent } from './components/citas-c/citas-c.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,12 @@ import { TabsComponent } from './tabs/tabs.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
