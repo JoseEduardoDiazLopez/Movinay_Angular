@@ -103,15 +103,20 @@ header{
     height: 40px;
 }
 .banner{
-    width: 1345px;
+    width: 1355px;
     height: 400px;
     position: relative;
-    margin-top: -355px;
+    margin-top: -370px;
     left: 1px;
+    background-repeat: no-repeat; 
 }
 .image_one{
   position: relative;
-  right: -90px;
+  right: -30px;
   border-radius: 25px;
   border: 2px solid #ba8f56;
+}
+.carousel{
+  position: relative;
+  right: 25px;
 }
