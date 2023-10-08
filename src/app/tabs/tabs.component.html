@@ -1,13 +1,20 @@
-<div class="tabs">
-    <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Pestaña 1</button>
-    <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Pestaña 2</button>
-    <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Pestaña 3</button>
-  </div>
+
+
   
   <div class="contenido">
-    <div [hidden]="tabActiva !== 0">
-        <div class="container mt-4">
+   
 
+    <div [hidden]="tabActiva !== 0">
+  
+        <div class="container mt-4">
+  
+         
+              <div class="pestanas button">
+                <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
+                <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
+                <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
+              </div>
+        
             <div class="card">
               <div class="card-header mi-color">
                 <h5 class="card-title">1. Informacion de la cita</h5>
@@ -174,10 +181,20 @@
       
     </div>
     <div [hidden]="tabActiva !== 1">
+      <div class="pestanas button">
+        <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Pestaña 1</button>
+        <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Pestaña 2</button>
+        <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Pestaña 3</button>
+      </div>
       <h2>Contenido de la Pestaña 2</h2>
       <p>Este es el contenido de la segunda pestaña.</p>
     </div>
     <div [hidden]="tabActiva !== 2">
+      <div class="pestanas button">
+        <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Pestaña 1</button>
+        <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Pestaña 2</button>
+        <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Pestaña 3</button>
+      </div>
       <h2>Contenido de la Pestaña 3</h2>
       <p>Este es el contenido de la tercera pestaña.</p>
     </div>

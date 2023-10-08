@@ -20,7 +20,7 @@ width: 500px; /* Ancho personalizado */
 
 .pestanas button {
     padding: 10px 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     border-bottom: none;
     border-radius: 5px 5px 0 0;
@@ -31,19 +31,18 @@ width: 500px; /* Ancho personalizado */
     background-color: #e0e0e0;
 }
 
-/* Contenido de las pestañas */
+
 .contenido-pestanas {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 0 0 5px 5px;
 }
 
-/* Ocultar todo el contenido de las pestañas por defecto */
+
 .contenido-pestanas > div {
     display: none;
 }
 
-/* Mostrar solo el contenido de la pestaña activa */
 .contenido-pestanas > div.activo {
     display: block;
 }
