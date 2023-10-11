@@ -155,6 +155,7 @@ header{
   }
 }
 
-
-
- 
+#twitter-widget-container {
+  width: 100%;
+  height: 300px; /* Ajusta la altura según tus necesidades */
+}
