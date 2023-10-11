@@ -21,7 +21,7 @@
               <li><a routerLink="/new-cita">Haz una cita</a></li>
               <li><a routerLink="#">Pagos de servicios</a></li>
               <li><a routerLink="#">Denuncias</a></li>
-              <li><a routerLink="#"><img src="../../../assets/images/iconadmin.png">Cuenta</a></li>
+              <li><a routerLink="#"><img src="../../../assets/images/iconadmin.png"> Iniciar Sesión</a></li>
             </ul>
           </div>
   
@@ -31,6 +31,7 @@
   
     </div>
   </header>
+
   <!-------------->
   <ngx-slick-carousel class="carousel" #slickModule [config]="slideConfig">
     <div ngxSlickItem *ngFor="let image of images">
@@ -38,12 +39,14 @@
     </div>
   </ngx-slick-carousel>
   <br>
-
+  <div class="image-row">
+    <img src="../../assets/images/Tramita.jpg" alt="Imagen 1" class="responsive-image">
+    <img src="../../assets/images/Agiliza.jpg" alt="Imagen 2" class="responsive-image">
+    <img src="../../assets/images/Chatbot.png" alt="Imagen 3" class="responsive-image">
+  </div>
+  
+  <br>
   <div id="twitter-widget-container"></div>
-
-
-
-
 
   <!-- Footer -->
 <footer class="text-center text-lg-start bg-white text-muted">
