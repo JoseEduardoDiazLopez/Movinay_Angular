@@ -1,6 +1,4 @@
 
-
-  
   <div class="contenido">
    
 
@@ -60,8 +58,7 @@
                   <div class="form-group">
                     <label for="horaCita">Hora:</label>
                     <select class="form-control" id="horaCita" name="horaCita">
-                      <option value="hora1">9:00</option>
-<option value="hora2">9:10</option>
+                      <option value="hora2">9:10</option>
 <option value="hora3">9:20</option>
 <option value="hora4">9:30</option>
 <option value="hora5">9:40</option>
@@ -102,8 +99,6 @@
 <option value="hora40">15:30</option>
 <option value="hora41">15:40</option>
 <option value="hora42">15:50</option>
-
-                     
                      
                     </select>
                   </div>
@@ -169,22 +164,19 @@
               </div>
             </div>
 
-         
-      
-       
-  
-    
+        
     </div>
       
-    </div>
+ </div>         <!-- contenido -->
     
     <div [hidden]="tabActiva !== 1">
+      <div class="container mt-4">
       <div class="pestanas button">
         <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
         <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
         <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
       </div>
-
+  
           <div class="card">
               <div class="card-header mi-color">
                 <h5 class="card-title">Mis citas</h5>
@@ -192,19 +184,43 @@
               <div class="card-body">
                 <label for="comprobanteDomicilio">Aún no tienes citas Realizadas.</label>
                   </div>
-          
+                </div>
           
             </div>
           </div>
 
     <div [hidden]="tabActiva !== 2">
+      <div class="container mt-4">
       <div class="pestanas button">
         <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
         <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
         <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
       </div>
-      <h2>Contenido de la Pestaña 3</h2>
+      <div class="card">
+        <div class="card-header mi-color">
+          <h5 class="card-title">Mis citas</h5>
+        </div>
+        <div class="card-body">
+          <label for="comprobanteDomicilio">Como realizar Una cita?</label>
+       <br>
+          <label for="comprobanteDomicilio">1.Ve a la pestaña ->Agendar cita</label>
+          <br>
+          <label for="comprobanteDomicilio">2.Rellena los datos con la informacion solicitada</label>
+          <br>
+          <label for="comprobanteDomicilio">3.Una vez llenados todos los datos de clic en el boton Agendar Cita Ya</label>
+          <br>
+          <br>
+          <label for="comprobanteDomicilio">Como ver mis citas?</label>
+          <br>
+             <label for="comprobanteDomicilio">1.Ve a la pestaña ->Mis citas</label>
+             <br>
+             <label for="comprobanteDomicilio">2.En esta pestalla podras ver las citas realizadas anteriormente</label>
+             <br>
+      
+        </div>
+          </div>
+    
+      </div>
 
     </div>
   </div>
-  
