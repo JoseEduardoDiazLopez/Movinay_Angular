@@ -1,9 +1,13 @@
 export class Denuncias{
     _id?: number;
-    descripcion: string;
-    tipoDenuncia: string; 
-    constructor (descripcion: string, tipoDenuncia: string){
-        this.descripcion = descripcion;
-        this.tipoDenuncia = tipoDenuncia;
+    idDenuncia : Number;
+    Fecha: String;
+    Descripcion: string;
+    TipoDenuncia: string; 
+    constructor (iddenuncia: number, fecha: string, descripcion: string, tipoDenuncia: string){
+        this.idDenuncia = iddenuncia;
+        this.Fecha = fecha;
+        this.Descripcion = descripcion;
+        this.TipoDenuncia = tipoDenuncia;
     }
 }

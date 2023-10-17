@@ -16,7 +16,7 @@ export class DenunciasComponent {
     this.obtenerDenuncias();
   }
   obtenerDenuncias(){
-    this._DenunciasService.getDenuncia().subscribe(data=>{
+    this._DenunciasService.getDenuncia().subscribe(data => {
       console.log(data);
       this.listarDenuncias = data;
     }, error=>{
