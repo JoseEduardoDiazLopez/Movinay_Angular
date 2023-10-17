@@ -8,7 +8,7 @@ import { Denuncias } from '../models/denuncias';
   providedIn: 'root'
 })
 export class DenunciasService {
-  URL='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/denuncias';
+  URL='http://localhost:3000/api/citas';
   constructor(private http: HttpClient) { }
   getDenuncia(): Observable<any>{
     return this.http.get(this.URL);
