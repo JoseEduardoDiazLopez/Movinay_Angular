@@ -15,6 +15,9 @@ import { CarouselModule } from 'primeng/carousel';
 import { FormsModule } from '@angular/forms';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denuncia.component';
+import { TramitesComponent } from './components/tramites/tramites.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denunc
     TabsComponent,
     DenunciasComponent,
     CrearDenunciaComponent,
+    TramitesComponent,
+    LoginComponent,
+    NavComponent,
   
   ],
   imports: [

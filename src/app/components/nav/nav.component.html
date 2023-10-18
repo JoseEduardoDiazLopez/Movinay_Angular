@@ -1,0 +1,33 @@
+<header>
+    <div  class="container">
+  
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3">
+          <div class="logo">
+            <img src="https://www.nayarit.gob.mx/wp-content/uploads/2023/02/Logotipo_HONOR.png" alt="logo" class="logo2">
+          </div>
+  
+        </div>
+        <div class="col-md-9 col-sm-9 col-9 text-end">
+        <div class="menu_icon" [class.menu_iconClass]="menu_icon_variable" (click)="openMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+          <div class="menu" [class.menuClasse]="menuVariable">
+            <ul>
+              <li><a routerLink="/home">Inicio</a></li>
+              <li><a routerLink="/tramites">Trámites y servicios</a></li>
+              <li><a routerLink="/new-cita">Haz una cita</a></li>
+              <li><a routerLink="#">Pagos de servicios</a></li>
+              <li><a routerLink="/denuncias">Denuncias</a></li>
+              <li><a routerLink="/sesion"><img src="../../../assets/images/iconadmin.png"> Iniciar Sesión</a></li>
+            </ul>
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </header>
