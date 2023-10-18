@@ -182,7 +182,18 @@
                 <h5 class="card-title">Mis citas</h5>
               </div>
               <div class="card-body">
-                <label for="comprobanteDomicilio">Aún no tienes citas Realizadas.</label>
+                <ng-container *ngIf="listarCitas.length > 0">
+                  <div class="col-md-4 mb-3" *ngFor="let citas of listarCitas">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ citas.Fecha }}</h5>
+                        <p class="card-text">Num de Tramite{{ citas.numTramite }}</p>
+                        <!--<i [routerLink]="['/editar-lugar', lugares._id]" class="fas fa-edit text-primary"></i>-->
+                        <!--<i (click)="eliminarLugar(lugares._id)" class="fas fa-trash-alt text-danger"></i>-->
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
                   </div>
                 </div>
           
