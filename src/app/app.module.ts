@@ -6,6 +6,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule} from '@angular/common/http';
 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CitasCComponent } from './components/citas-c/citas-c.component';
@@ -16,8 +17,10 @@ import { FormsModule } from '@angular/forms';
 import { DenunciasComponent } from './components/denuncias/denuncias.component';
 import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denuncia.component';
 import { TramitesComponent } from './components/tramites/tramites.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 import { NavComponent } from './components/nav/nav.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { NavComponent } from './components/nav/nav.component';
     CrearDenunciaComponent,
     TramitesComponent,
     LoginComponent,
+    RegisterComponent,
     NavComponent,
   
   ],
@@ -40,6 +44,8 @@ import { NavComponent } from './components/nav/nav.component';
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
+    HttpClientModule,
+    CommonModule,
     HttpClientModule
   ],
   providers: [
