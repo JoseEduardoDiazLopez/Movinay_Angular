@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'tramites', component: TramitesComponent},
   {path: 'sesion',component: LoginComponent},
   {path: 'registro',component: RegisterComponent},
+  {path: 'login',component: LoginComponent},
   {path: '**', redirectTo:'home',pathMatch:"full"} // Si no existe la ruta, que todo lo retorne a principal
 ];
 
