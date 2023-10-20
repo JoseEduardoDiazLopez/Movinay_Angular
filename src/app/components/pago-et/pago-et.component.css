@@ -1,0 +1,94 @@
+/* Estilos generales */
+body {
+    background-color: #D4C19C;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+    padding: 0; /* Eliminar el relleno predeterminado del cuerpo */
+  }
+  
+  .container {
+    max-width: 1200px; /* Limitar el ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 20px;
+  }
+  /*********************************************************
+  
+  /* Estilos del formulario de pago */
+  .info-container {
+    margin: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .info-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Agregar un fondo ligeramente más claro para los campos */
+  }
+  
+  .payment-form input:focus {
+    outline: none; /* Eliminar el contorno al hacer clic en un campo */
+    border: 1px solid #0077B6; /* Cambiar el color del borde al enfocar */
+  }
+ /********************************************************/ 
+  /* Estilos del formulario de pago */
+  .payment-container {
+    margin: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Agregar un fondo ligeramente más claro para los campos */
+  }
+  
+  .payment-form input:focus {
+    outline: none; /* Eliminar el contorno al hacer clic en un campo */
+    border: 1px solid #0077B6; /* Cambiar el color del borde al enfocar */
+  }
+  
+  
+  .pay-button {
+    background-color: #0077B6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Hacer el texto más audaz */
+  }
+  
+  .pay-button:hover {
+    background-color: #00557D; /* Cambiar el color al pasar el mouse */
+  }
+  
+  /* Agregar transiciones para efectos suaves */
+  .menu ul li, .pay-button {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  

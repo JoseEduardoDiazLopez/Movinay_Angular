@@ -21,6 +21,10 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { NavComponent } from './components/nav/nav.component';
 import { CommonModule } from '@angular/common';
+import { PagoEpComponent } from './components/pago-ep/pago-ep.component';
+import { PagoEtComponent } from './components/pago-et/pago-et.component';
+import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +38,9 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     RegisterComponent,
     NavComponent,
+    PagoEpComponent,
+    PagoEtComponent,
+    PagoEeComponent,
   
   ],
   imports: [

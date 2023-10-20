@@ -1,0 +1,118 @@
+/* Estilos generales */
+body {
+    background-color: #D4C19C;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+    padding: 0; /* Eliminar el relleno predeterminado del cuerpo */
+  }
+  
+  .container {
+    max-width: 1200px; /* Limitar el ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 20px;
+  }
+
+  
+  /* Estilos del formulario de pago */
+  .payment-container {
+    margin: 50px;
+    padding: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .payment-form h2 {
+    font-size: 24px;
+    margin-bottom: 50px;
+  
+  }
+  
+  /* Agrega estos estilos para acomodar los métodos de pago en fila */
+  .payment-form form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .payment-form label {
+    text-align: center;
+  }
+  
+  .payment-form img {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .payment-form img:hover {
+    transform: scale(1.1); /* Hace que las imágenes se agranden al pasar el mouse */
+  }
+  
+  .payment-form .pay-button {
+    margin-top: 20px;
+  }
+  /*Labels*/
+  .payment-form label {
+    text-align: center;
+    font-size: 15px; /* Ajusta el tamaño del texto según tus preferencias */
+  }
+  
+  .payment-form label:hover {
+    transform: scale(1.1); /* Hace que las imágenes se agranden al pasar el mouse */
+  }
+  
+  /*********************************************************/
+  .payment-container {
+    margin: 50px;
+    padding: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .payment-form h2 {
+    font-size: 22px;
+    margin-bottom: 50px;
+  
+  }
+  
+  /* Agrega estos estilos para acomodar los métodos de pago en fila */
+  .info-form form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .info-form label {
+    text-align: center;
+  }
+  
+  
+  .info-form img {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .info-form img:hover {
+    transform: scale(1.1); /* Hace que las imágenes se agranden al pasar el mouse */
+  }
+  
+  .info-form .pay-button {
+    margin-top: 20px;
+  }
+  /*Labels*/
+  .info-form label {
+    text-align: center;
+    font-size: 15px; /* Ajusta el tamaño del texto según tus preferencias */
+  }
+  
+  .info-form label:hover {
+    transform: scale(1.1); /* Hace que las imágenes se agranden al pasar el mouse */
+  }
+  
