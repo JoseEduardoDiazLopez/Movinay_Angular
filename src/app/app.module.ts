@@ -24,6 +24,7 @@ import { CommonModule } from '@angular/common';
 import { PagoEpComponent } from './components/pago-ep/pago-ep.component';
 import { PagoEtComponent } from './components/pago-et/pago-et.component';
 import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
     PagoEpComponent,
     PagoEtComponent,
     PagoEeComponent,
+    FooterComponent,
   
   ],
   imports: [
