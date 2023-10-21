@@ -20,9 +20,9 @@ const routes: Routes = [
   {path: 'sesion',component: LoginComponent},
   {path: 'registro',component: RegisterComponent},
   {path: 'login',component: LoginComponent},
-  {path: 'PagoE-p',component: PagoEpComponent},
-  {path: 'PagoE-t',component: PagoEtComponent},
-  {path: 'PagoE-e',component: PagoEeComponent},
+  {path: 'Pagoprincipal',component: PagoEpComponent},
+  {path: 'Pagotarjeta',component: PagoEtComponent},
+  {path: 'Pagoefectivo',component: PagoEeComponent},
   {path: '**', redirectTo:'home',pathMatch:"full"} // Si no existe la ruta, que todo lo retorne a principal
 ];
 
