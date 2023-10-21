@@ -16,14 +16,13 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let denuncias of listarDenuncias">
-                            <td>{{denuncias.Descripcion}}</td>
-                            <td>{{denuncias.TipoDenuncia}}</td>
+                         <!-- <tr *ngFor="let denuncias of listarDenuncias">
+                            <td>{{denuncias.Descripcion}}</td>-->
                             <td>
                                 <!--<i [routerLink]="['/editar-lugar', lugares._id]" class="fas fa-edit text-primary"></i>-->
                                 <!--<i (click)="eliminarLugar(lugares._id)"class="fas fa-trash-alt text-danger"></i>-->
                             </td>
-                          </tr>
+                         <!--</tr>--> 
                         </tbody>
                       </table>
                       <h5 style="text-align: start; margin-top: 10px;" *ngIf="listarDenuncias.length == 0"> No hay lugares para mostrar</h5>
@@ -41,10 +40,10 @@
         <div class="col-md-4 mb-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{{ denuncia.Descripcion }}</h5>
-                    <p class="card-text">Tipo de Denuncia: {{ denuncia.TipoDenuncia }}</p>
-                    <!--<i [routerLink]="['/editar-lugar', lugares._id]" class="fas fa-edit text-primary"></i>-->
-                    <!--<i (click)="eliminarLugar(lugares._id)" class="fas fa-trash-alt text-danger"></i>-->
+                    <h5 class="card-title">{{ denuncia.Fecha}}</h5>
+                    <img src={{denuncia.Foto}} style="width:340px; height:300px;">
+                    <p class="card-text">{{denuncia.Descripcion}}</p>
+                    <p>{{denuncia.Calles}}, {{denuncia.Colonia}}, {{denuncia.Municipio}}</p>
                 </div>
             </div>
         </div>
