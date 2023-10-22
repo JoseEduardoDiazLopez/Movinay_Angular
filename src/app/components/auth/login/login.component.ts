@@ -42,7 +42,7 @@ export class LoginComponent {
       (response) => {
         console.log('Login successful', response);
         this.toastr.info('Sesion con éxito','¡Atención!',);
-        this.router.navigate(['/denuncias']);
+        this.router.navigate(['/home']);
       },
       (error) => {
         console.error('Login error', error);
