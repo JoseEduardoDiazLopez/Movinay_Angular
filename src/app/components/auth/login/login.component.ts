@@ -28,12 +28,10 @@ export class LoginComponent {
   registerUser() {
     this.authService.register(this.registerUserr).subscribe(
       (response) => {
-        // Handle successful registration, e.g., show a success message
         console.log('Registration successful', response);
         this.toastr.info('Registro con éxito','¡Atención!',);
       },
       (error) => {
-        // Handle registration error, e.g., show an error message
         console.error('Registration error', error);
       }
     );
@@ -42,13 +40,11 @@ export class LoginComponent {
   loginUser() {
     this.authService.login(this.loginUserr).subscribe(
       (response) => {
-        // Handle successful login, e.g., navigate to a different page
         console.log('Login successful', response);
         this.toastr.info('Sesion con éxito','¡Atención!',);
         this.router.navigate(['/denuncias']);
       },
       (error) => {
-        // Handle login error, e.g., show an error message
         console.error('Login error', error);
         this.toastr.info('Error al iniciar sesión','¡Atención!',);
       }
