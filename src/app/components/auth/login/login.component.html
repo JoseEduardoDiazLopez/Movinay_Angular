@@ -1,13 +1,27 @@
-<div class="container">
-  <div class="login">
-    <div class="login-triangle"></div>
-    
-    <h2 class="login-header">Log in</h2>
-  
-    <form #frmLogin class="login-container">
-      <p><input type="email" placeholder="Email"></p>
-      <p><input type="password" placeholder="Password"></p>
-      <p><input type="submit" value="Log in"></p>
-    </form>
+<body style="background-color: #D4C19C;">
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="auth-container text-center">
+          <h2>Iniciar Sesión</h2>
+          <form (submit)="loginUser()">
+            <div class="form-group">
+              <label for="loginUsername">Nombre de usuario:</label>
+              <input type="text" id="loginUsername" [(ngModel)]="loginUserr.username" name="loginUsername" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Contraseña:</label>
+              <input type="password" id="loginPassword" [(ngModel)]="loginUserr.password" name="loginPassword" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+          </form>
+          <p>¿No tienes una cuenta? <a routerLink="/registro">Regístrate</a></p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  
+</body>
