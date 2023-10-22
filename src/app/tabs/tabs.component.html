@@ -16,7 +16,7 @@
       <div class="card">
 
         <div class="card-header mi-color">
-          <h5 class="card-title">1. Seleccione los datos de su cita</h5>
+          <h3 class="card-title"> Por Favor Seleccione los datos de su cita</h3>
         </div>
         <div class="card-body">
 
@@ -24,82 +24,122 @@
             <!-- Columna izquierda para el formulario -->
             <div class="col-md-8">
               <form>
-
-
                 <!-- Selector de Fecha -->
                 <div class="form-group">
-                  <label for="fecha">Fecha:</label>
-                  <input type="date" class="form-control" id="fecha" name="fecha">
+                  <hr>
+
+                  <div class="card">
+                    <div class="card-header mi-color">
+                      <h5 class="card-title"> Seleccione La Fecha de su cita</h5>
+                    </div>
+                    <div class="card-body">
+                      <input type="date" class="form-control" id="fecha" name="fecha">
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Combo Box para la Hora -->
-                <div class="form-group">
-                  <label for="horaCita">Hora:</label>
-                  <select class="form-control" id="horaCita" name="horaCita">
-                    <option value="hora2">9:10</option>
-                    <option value="hora3">9:20</option>
-                    <option value="hora4">9:30</option>
-                    <option value="hora5">9:40</option>
-                    <option value="hora6">9:50</option>
-                    <option value="hora7">10:00</option>
-                    <option value="hora8">10:10</option>
-                    <option value="hora9">10:20</option>
-                    <option value="hora10">10:30</option>
-                    <option value="hora11">10:40</option>
-                    <option value="hora12">10:50</option>
-                    <option value="hora13">11:00</option>
-                    <option value="hora14">11:10</option>
-                    <option value="hora15">11:20</option>
-                    <option value="hora16">11:30</option>
-                    <option value="hora17">11:40</option>
-                    <option value="hora18">11:50</option>
-                    <option value="hora19">12:00</option>
-                    <option value="hora20">12:10</option>
-                    <option value="hora21">12:20</option>
-                    <option value="hora22">12:30</option>
-                    <option value="hora23">12:40</option>
-                    <option value="hora24">12:50</option>
-                    <option value="hora25">13:00</option>
-                    <option value="hora26">13:10</option>
-                    <option value="hora27">13:20</option>
-                    <option value="hora28">13:30</option>
-                    <option value="hora29">13:40</option>
-                    <option value="hora30">13:50</option>
-                    <option value="hora31">14:00</option>
-                    <option value="hora32">14:10</option>
-                    <option value="hora33">14:20</option>
-                    <option value="hora34">14:30</option>
-                    <option value="hora35">14:40</option>
-                    <option value="hora36">14:50</option>
-                    <option value="hora37">15:00</option>
-                    <option value="hora38">15:10</option>
-                    <option value="hora39">15:20</option>
-                    <option value="hora40">15:30</option>
-                    <option value="hora41">15:40</option>
-                    <option value="hora42">15:50</option>
+                <div class="card">
+                  <div class="card-header mi-color">
+                    <h5 class="card-title"> Seleccione La Hora de su cita</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
 
-                  </select>
+                      <select class="form-control" id="horaCita" name="horaCita">
+                        <option value="hora2">9:10</option>
+                        <option value="hora3">9:20</option>
+                        <option value="hora4">9:30</option>
+                        <option value="hora5">9:40</option>
+                        <option value="hora6">9:50</option>
+                        <option value="hora7">10:00</option>
+                        <option value="hora8">10:10</option>
+                        <option value="hora9">10:20</option>
+                        <option value="hora10">10:30</option>
+                        <option value="hora11">10:40</option>
+                        <option value="hora12">10:50</option>
+                        <option value="hora13">11:00</option>
+                        <option value="hora14">11:10</option>
+                        <option value="hora15">11:20</option>
+                        <option value="hora16">11:30</option>
+                        <option value="hora17">11:40</option>
+                        <option value="hora18">11:50</option>
+                        <option value="hora19">12:00</option>
+                        <option value="hora20">12:10</option>
+                        <option value="hora21">12:20</option>
+                        <option value="hora22">12:30</option>
+                        <option value="hora23">12:40</option>
+                        <option value="hora24">12:50</option>
+                        <option value="hora25">13:00</option>
+                        <option value="hora26">13:10</option>
+                        <option value="hora27">13:20</option>
+                        <option value="hora28">13:30</option>
+                        <option value="hora29">13:40</option>
+                        <option value="hora30">13:50</option>
+                        <option value="hora31">14:00</option>
+                        <option value="hora32">14:10</option>
+                        <option value="hora33">14:20</option>
+                        <option value="hora34">14:30</option>
+                        <option value="hora35">14:40</option>
+                        <option value="hora36">14:50</option>
+                        <option value="hora37">15:00</option>
+                        <option value="hora38">15:10</option>
+                        <option value="hora39">15:20</option>
+                        <option value="hora40">15:30</option>
+                        <option value="hora41">15:40</option>
+                        <option value="hora42">15:50</option>
+
+                      </select>
+                    </div>
+                  </div>
                 </div>
                 <!-- Combo Box para el Módulo -->
-                <div class="form-group">
-                  <label for="moduloCita">Módulo:</label>
-                  <select class="form-control" id="moduloCita" name="moduloCita">
-                    <option value="modulo1">Módulo 1</option>
-                    <option value="modulo2">Módulo 2</option>
+                <div class="card">
+                  <div class="card-header mi-color">
+                    <h5 class="card-title"> Seleccione El Modulo de Atencion De Su Cita</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
 
-                  </select>
+                      <label for="moduloCita">Módulo:</label>
+                      <select class="form-control" id="moduloCita" name="moduloCita">
+                        <option value="modulo1">Módulo 1</option>
+                        <option value="modulo2">Módulo 2</option>
+
+                      </select>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Botón de Envío -->
+                <hr>
                 <br>
-                <button type="submit" class="btn btn-primary BOTONCENTRO">Agendar Cita ya</button>
+                <button type="submit" class="btn btn-primary BOTONCENTRO" style="font-size: medium;">Agendar Cita ya</button>
                 <br>
+                <hr>
               </form>
             </div>
             <div class="col-md-4">
+              <hr>
               <div class="image-container">
-              <img src="https://us.123rf.com/450wm/takseller/takseller2306/takseller230617321/207734480-escena-callejera-de-la-ciudad-de-nueva-york-con-personas-y-autom%C3%B3viles.jpg?ver=6">
-            </div>
+                <img
+                  src="https://us.123rf.com/450wm/takseller/takseller2306/takseller230617321/207734480-escena-callejera-de-la-ciudad-de-nueva-york-con-personas-y-autom%C3%B3viles.jpg?ver=6">
+
+              </div>
+              <hr>
+              <div class="card">
+                <div class="card-header mi-color">
+                  <h5 class="card-title">NECESARIO AL MOMENTO DE ASISTIR A TU CITA</h5>
+                </div>
+                <div class="card-body">
+
+                  <!-- Contenido adicional en el card-body -->
+
+                  <p style="font-size: medium;">1. Necesitara un comprobante de domicilio</p>
+                  <p style="font-size: medium;">2. Necesitara una identificación oficial</p>
+                </div>
+              </div>
+
             </div><!-- columna 2 -->
           </div>
         </div>
@@ -140,42 +180,42 @@
 
       </div>
     </div>
-  </div>
 
-  <div [hidden]="tabActiva !== 2">
-    <div class="container mt-4">
-      <div class="pestanas button">
-        <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
-        <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
-        <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
-      </div>
-      <div class="card">
-        <div class="card-header mi-color">
-          <h5 class="card-title">Mis citas</h5>
-        </div>
-        <div class="card-body">
-          <label for="comprobanteDomicilio">Como realizar Una cita?</label>
-          <br>
-          <label for="comprobanteDomicilio">1.Ve a la pestaña ->Agendar cita</label>
-          <br>
-          <label for="comprobanteDomicilio">2.Rellena los datos con la informacion solicitada</label>
-          <br>
-          <label for="comprobanteDomicilio">3.Una vez llenados todos los datos de clic en el boton Agendar Cita
-            Ya</label>
-          <br>
-          <br>
-          <label for="comprobanteDomicilio">Como ver mis citas?</label>
-          <br>
-          <label for="comprobanteDomicilio">1.Ve a la pestaña ->Mis citas</label>
-          <br>
-          <label for="comprobanteDomicilio">2.En esta pestalla podras ver las citas realizadas anteriormente</label>
-          <br>
 
+    <div [hidden]="tabActiva !== 2">
+      <div class="container mt-4">
+        <div class="pestanas button">
+          <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
+          <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
+          <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
         </div>
+        <div class="card">
+          <div class="card-header mi-color">
+            <h5 class="card-title">Mis citas</h5>
+          </div>
+          <div class="card-body">
+            <label for="comprobanteDomicilio">Como realizar Una cita?</label>
+            <br>
+            <label for="comprobanteDomicilio">1.Ve a la pestaña ->Agendar cita</label>
+            <br>
+            <label for="comprobanteDomicilio">2.Rellena los datos con la informacion solicitada</label>
+            <br>
+            <label for="comprobanteDomicilio">3.Una vez llenados todos los datos de clic en el boton Agendar Cita
+              Ya</label>
+            <br>
+            <br>
+            <label for="comprobanteDomicilio">Como ver mis citas?</label>
+            <br>
+            <label for="comprobanteDomicilio">1.Ve a la pestaña ->Mis citas</label>
+            <br>
+            <label for="comprobanteDomicilio">2.En esta pestalla podras ver las citas realizadas anteriormente</label>
+            <br>
+
+          </div>
+        </div>
+
       </div>
 
     </div>
-
   </div>
-</div>
-<app-footer></app-footer>
+  <app-footer></app-footer>
