@@ -20,6 +20,9 @@ export class NavComponent {
     this.menuVariable =! this.menuVariable;
     this.menu_icon_variable =! this.menu_icon_variable;
   }
+  closeMenu() {
+    this.menuVariable = false;
+  }
    // Verifica si el usuario está logueado
    userIsLoggedIn(): boolean {
     return this.currentUser !== null; 

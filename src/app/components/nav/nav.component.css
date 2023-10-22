@@ -1,106 +1,129 @@
 /* MENU */
 
-header{
+/* Establecer una fuente de texto predeterminada para todo el menú */
+body {
+  font-family: Arial, sans-serif;
+}
 
-    padding:12px 0;
-    background-color: #ffffff;
-  
-  
-  }
-  .menu{
-   margin-top: 10px;
-  }
-  .menu ul{
-    padding: 0;
-    margin:0;
-  
-  }
-  
-  .menu ul li{
-    list-style-type: none;
-  
-    display: inline-block;
-  
-    margin-left: 24px;
-  
-    text-transform: uppercase;
-  
-  }
-  .menu ul li a{
-    list-style: none;
-    text-decoration: none;
-    color: #000000;
-  }
-  .menu ul li a:hover{
-    color: #e9c62c;
-    cursor: pointer;
+header {
+  position: relative;
+  padding: 10px 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.menu {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+}
+
+.menu ul li a:hover {
+  color: #fa5757;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Estilos para pantallas más pequeñas (responsive) */
+@media (max-width: 999px) {
+  .menu {
+    position: fixed;
+    right: -280px;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background: #ffffff;
     transition: 0.4s ease-in-out;
+    z-index: 999;
   }
-  @media(max-width: 999px){
-    .menu {
-      position: fixed;
-      right: -280px;
-      top: 64px;
-      width: 280px;
-      height: 100%;
-      background: #ffffff;
-      transition: 0.4s ease-in-out;
-      z-index: 999; /* Valor alto para estar por encima de otros elementos */
-    }
-    
+
+  .menu ul {
+    text-align: left;
+  }
+
   .menu ul li {
     display: block;
-    text-align: left;
     margin: 0;
     padding: 10px 0 10px 26px;
-    border-bottom: 1px solid hsl(0, 0%, 100%);
-  
+    border-bottom: 1px solid #555;
   }
-  .menu_icon{
+
+  .menu_icon {
     display: inline-block;
     position: relative;
     right: -80px;
-    top: 20 px;
-  
+    top: -30px;
   }
-  
-  
+
   .menu_icon span {
     width: 32px;
     height: 3px;
     background: #000000;
     display: block;
     transition: 0.2s ease-in-out;
-  
   }
+
   .menu_icon span:nth-child(2) {
     margin: 4px 0;
-  
   }
-  .menu_iconClass span:nth-child(2){
-  
-  display: none;
+
+  .menu_iconClass span:nth-child(1),
+  .menu_iconClass span:nth-child(3) {
+    width: 32px;
+    height: 3px;
+    background: #000000;
+    display: block;
+    transition: 0.2s ease-in-out;
   }
-  
-  .menu_iconClass span:nth-child(1){
-  
-    transform: rotate(40deg);
+
+  .menu_iconClass span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
   }
-  
-  
-  .menu_iconClass span:nth-child(3){
-  
-    transform: rotate(-40deg);
-    margin-top: -3px;
+
+  .menu_iconClass span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
   }
-  
-  .menuClasse{
-  
-  right: 0;
-  transition: 0.4s ease-in-out;
-  
+
+  .menuClasse {
+    right: 0;
   }
+
+  /* Mostrar el botón de cierre cuando el menú es responsivo (pantalla pequeña) */
+  .menu ul li.close-menu {
+    display: block;
+    color: #fa5757;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
   }
-  .logo2{
-    height: 40px;
+
+  .menu ul li.close-menu:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+}
+
+.logo2 {
+  height: 40px;
 }
