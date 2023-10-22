@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, map } from 'rxjs';
 import { User } from '../models/user';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +21,7 @@ export class AuthService {
         const loggedInUser: User = response.user;
         this.currentUserSubject.next(loggedInUser);
         return loggedInUser;
+
       })
     );
   }
@@ -34,6 +35,7 @@ export class AuthService {
       })
     );
   }
+  
   
 
   logout() {
