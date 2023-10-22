@@ -4,7 +4,9 @@
 body {
   font-family: Arial, sans-serif;
 }
-
+.menu ul li.close-session {
+  display: none;
+}
 header {
   position: relative;
   padding: 10px 0;
@@ -57,6 +59,9 @@ header {
     transition: 0.4s ease-in-out;
     z-index: 999;
   }
+  .menu ul li.close-session {
+    display: block;
+  }
 
   .menu ul {
     text-align: left;
@@ -88,21 +93,13 @@ header {
     margin: 4px 0;
   }
 
-  .menu_iconClass span:nth-child(1),
-  .menu_iconClass span:nth-child(3) {
-    width: 32px;
-    height: 3px;
-    background: #000000;
-    display: block;
-    transition: 0.2s ease-in-out;
-  }
-
   .menu_iconClass span:nth-child(1) {
-    transform: translateY(0) rotate(45deg);
+    transform: rotate(45deg);
   }
 
   .menu_iconClass span:nth-child(3) {
-    transform: translateY(0) rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: -3px;
   }
 
   .menuClasse {

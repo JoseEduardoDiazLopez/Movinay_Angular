@@ -12,15 +12,20 @@
   border-radius: 25px;
   border: 2px solid #ba8f56;
 }
+/* Establecer el ancho y centrar el carousel */
 .carousel {
-  width: 80%; /* Establecer el ancho del carousel */
-  margin: 0 auto; /* Centrar el carousel horizontalmente */
+  width: 85%;
+  margin: 0 auto;
 }
 
+/* Ajustar el estilo de las imágenes */
 .carousel img {
-  max-width: 100%; /* Asegurarse de que las imágenes no sean más anchas que el carousel */
+  display: block; /* Para eliminar cualquier espacio en blanco debajo de las imágenes */
+  margin: 0 auto; /* Centrar las imágenes horizontalmente */
+  max-width: 100%; /* Asegurar que las imágenes no sean más anchas que el carousel */
   height: auto; /* Mantener la proporción original de la imagen */
 }
+
 
 .imageuno{
   max-width: 100%;
