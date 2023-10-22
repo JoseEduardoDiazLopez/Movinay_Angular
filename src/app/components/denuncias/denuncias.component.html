@@ -1,37 +1,8 @@
 <app-nav></app-nav>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-            <div class="card">
-                <div class="card-body text-center">
-                    <span class="titulo"> DENUNCIAS</span>
-                    <button class="btn btn-danger float-end" routerLink="/paneladmin">Regresar</button>
-                    <button class="btn btn-success float-end" routerLink="/crear-lugar">Añadir Denuncia</button>
-                    <table *ngIf="listarDenuncias.length > 0" class="table table-striped mt-3">
-                        <thead>
-                          <tr>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Tipo de Denuncia</th>
-                            <th scope="col"></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                         <!-- <tr *ngFor="let denuncias of listarDenuncias">
-                            <td>{{denuncias.Descripcion}}</td>-->
-                            <td>
-                                <!--<i [routerLink]="['/editar-lugar', lugares._id]" class="fas fa-edit text-primary"></i>-->
-                                <!--<i (click)="eliminarLugar(lugares._id)"class="fas fa-trash-alt text-danger"></i>-->
-                            </td>
-                         <!--</tr>--> 
-                        </tbody>
-                      </table>
-                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listarDenuncias.length == 0"> No hay denuncias para mostrar</h5>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="image-container">
+    <img src="../../../assets/images/denuncias.png" class="responsive-image" alt="Denuncias">
+    <button class="button">Denunciar ahora</button>
 </div>
-
 <br>
 
 <div class="container">
