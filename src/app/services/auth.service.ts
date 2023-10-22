@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, map } from 'rxjs';
 import { User } from '../models/user';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,7 @@ export class AuthService {
   private currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
   public currentUser: Observable<User | null> = this.currentUserSubject.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private toastr: ToastrService) { }
 
   register(user: User): Observable<any> {
     return this.http.post(this.URL1, user).pipe(
@@ -40,6 +41,7 @@ export class AuthService {
 
   logout() {
     this.currentUserSubject.next(null);
+    this.toastr.warning('Se cerro la sesión.');
   }
   
 }

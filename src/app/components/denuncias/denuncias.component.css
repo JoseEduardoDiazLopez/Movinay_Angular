@@ -1,0 +1,37 @@
+.image-container {
+    text-align: center;
+}
+
+/* Estilo para hacer la imagen responsiva y reducirla */
+.responsive-image {
+    max-width: 70%; /* Puedes ajustar este valor para cambiar el tamaño */
+    height: auto;
+}
+
+/* Estilo para el botón */
+.button {
+    position: absolute;
+    top: 90%; /* Centra verticalmente el botón en relación con el contenedor */
+    left: 37%; /* Centra horizontalmente el botón en relación con el contenedor */
+    transform: translate(-50%, -50%); /* Centra el botón en el centro del contenedor */
+    background-color: #000000; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    padding: 20px 40px; /* Ajusta el padding según tus preferencias para hacerlo más grande */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agrega una transición de color de fondo al botón */
+}
+@media screen and (max-width: 900px) {
+    .button {
+        position: absolute;
+        top: 44%; /* Centra verticalmente el botón en relación con el contenedor */
+        left: 37%; /* Centra horizontalmente el botón en relación con el contenedor */
+        transform: translate(-50%, -50%); /* Centra el botón en el centro del contenedor */
+        background-color: #000000; /* Color de fondo del botón */
+        color: #ffffff; /* Color del texto del botón */
+        padding: 10px 5px; /* Ajusta el padding según tus preferencias para hacerlo más grande */
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Agrega una transición de color de fondo al botón */
+    }
+}
