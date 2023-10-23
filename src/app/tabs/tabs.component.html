@@ -9,7 +9,7 @@
       <div class="pestanas button">
         <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
         <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
-        <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
+        
       </div>
 
 
@@ -155,9 +155,9 @@
         <div class="pestanas button">
           <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
           <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
-          <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
+          
         </div>
-
+        
         <div class="card">
           <div class="card-header mi-color">
             <h5 class="card-title">Mis citas</h5>
@@ -167,7 +167,8 @@
               <div class="col-md-4 mb-3" *ngFor="let citas of listarCitas">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">{{ citas.Fecha }}</h5>
+                    
+                    <h5 class="card-title">{{citas.Fecha }}</h5>
                     <p class="card-text">Num de Tramite{{ citas.numTramite }}</p>
                     <!--<i [routerLink]="['/editar-lugar', lugares._id]" class="fas fa-edit text-primary"></i>-->
                     <!--<i (click)="eliminarLugar(lugares._id)" class="fas fa-trash-alt text-danger"></i>-->
@@ -182,40 +183,6 @@
     </div>
 
 
-    <div [hidden]="tabActiva !== 2">
-      <div class="container mt-4">
-        <div class="pestanas button">
-          <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
-          <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
-          <button (click)="mostrarContenido(2)" [class.active]="tabActiva === 2">Informacion</button>
-        </div>
-        <div class="card">
-          <div class="card-header mi-color">
-            <h5 class="card-title">Mis citas</h5>
-          </div>
-          <div class="card-body">
-            <label for="comprobanteDomicilio">Como realizar Una cita?</label>
-            <br>
-            <label for="comprobanteDomicilio">1.Ve a la pestaña ->Agendar cita</label>
-            <br>
-            <label for="comprobanteDomicilio">2.Rellena los datos con la informacion solicitada</label>
-            <br>
-            <label for="comprobanteDomicilio">3.Una vez llenados todos los datos de clic en el boton Agendar Cita
-              Ya</label>
-            <br>
-            <br>
-            <label for="comprobanteDomicilio">Como ver mis citas?</label>
-            <br>
-            <label for="comprobanteDomicilio">1.Ve a la pestaña ->Mis citas</label>
-            <br>
-            <label for="comprobanteDomicilio">2.En esta pestalla podras ver las citas realizadas anteriormente</label>
-            <br>
 
-          </div>
-        </div>
-
-      </div>
-
-    </div>
   </div>
   <app-footer></app-footer>

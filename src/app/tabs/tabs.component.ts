@@ -26,5 +26,6 @@ export class TabsComponent {
     }, (error: any)=>{
       console.log(error);
     });
-  }// obtenerDenuncias
+  }// cita
+  
 }
