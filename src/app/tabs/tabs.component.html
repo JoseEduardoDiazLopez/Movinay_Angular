@@ -7,132 +7,111 @@
         <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
         <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
         
-      </div>
+      </div> 
 
 
       <div class="card">
 
         <div class="card-header mi-color">
-          <h3 class="card-title"> Por Favor Seleccione los datos de su cita</h3>
+          <h3 class="card-title"> Por favor, capture sus datos para agendar su cita.</h3>
         </div>
         <div class="card-body">
 
           <div class="row">
             <!-- Columna izquierda para el formulario -->
             <div class="col-md-8">
-              <form>
-                <hr>
-                    <!-- Combo Box para el Módulo -->
-                    <div class="card">
-                      <div class="card-header mi-color">
-                        <h5 class="card-title"> Seleccione El Modulo de Atencion De Su Cita</h5>
-                      </div>
-                      <div class="card-body">
-                        <div class="form-group">
-    
-       
-                          <select class="form-control" id="cmbxModulo" name="moduloCita">
-                            <option value="modulo1">Módulo 1</option>
-                            <option value="modulo2">Módulo 2</option>
-    
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                <!-- Selector de Fecha -->
-                <div class="form-group">
-                  <hr>
-
-                  <div class="card">
-                    <div class="card-header mi-color">
-                      <h5 class="card-title"> Seleccione La Fecha de su cita</h5>
-                    </div>
-                    <div class="card-body">
-                      <input type="date" class="form-control"  id="fecha" name="fecha">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Combo Box para la Hora -->
-                <div class="card">
+              <form class="mt-5" [formGroup]="tabsForm" (ngSubmit)="agregarCita()">
+                
+                <!-- Modulo -->
+                <div class="mb-3">
                   <div class="card-header mi-color">
-                    <h5 class="card-title"> Seleccione La Hora de su cita</h5>
+                    <h5 class="card-title">Modulo</h5>
                   </div>
-                  <div class="card-body">
-                    <div class="form-group">
-
-                      <select class="form-control" id="cmbxHora" name="horaCita">
-                        <option value="hora2">9:10</option>
-                        <option value="hora3">9:20</option>
-                        <option value="hora4">9:30</option>
-                        <option value="hora5">9:40</option>
-                        <option value="hora6">9:50</option>
-                        <option value="hora7">10:00</option>
-                        <option value="hora8">10:10</option>
-                        <option value="hora9">10:20</option>
-                        <option value="hora10">10:30</option>
-                        <option value="hora11">10:40</option>
-                        <option value="hora12">10:50</option>
-                        <option value="hora13">11:00</option>
-                        <option value="hora14">11:10</option>
-                        <option value="hora15">11:20</option>
-                        <option value="hora16">11:30</option>
-                        <option value="hora17">11:40</option>
-                        <option value="hora18">11:50</option>
-                        <option value="hora19">12:00</option>
-                        <option value="hora20">12:10</option>
-                        <option value="hora21">12:20</option>
-                        <option value="hora22">12:30</option>
-                        <option value="hora23">12:40</option>
-                        <option value="hora24">12:50</option>
-                        <option value="hora25">13:00</option>
-                        <option value="hora26">13:10</option>
-                        <option value="hora27">13:20</option>
-                        <option value="hora28">13:30</option>
-                        <option value="hora29">13:40</option>
-                        <option value="hora30">13:50</option>
-                        <option value="hora31">14:00</option>
-                        <option value="hora32">14:10</option>
-                        <option value="hora33">14:20</option>
-                        <option value="hora34">14:30</option>
-                        <option value="hora35">14:40</option>
-                        <option value="hora36">14:50</option>
-                        <option value="hora37">15:00</option>
-                        <option value="hora38">15:10</option>
-                        <option value="hora39">15:20</option>
-                        <option value="hora40">15:30</option>
-                        <option value="hora41">15:40</option>
-                        <option value="hora42">15:50</option>
-
-                      </select>
+                  <select class="form-control" formControlName="Modulo" placeholder="Modulo">
+                    <option value="Tepic">Módulo 1 (Tepic)</option>
+                    <option value="Bahia de Banderas">Módulo 2 (Bahia de Banderas)</option>
+                  </select>
+                    <div class="text-danger" *ngIf="tabsForm.get('Modulo')?.hasError('required') && tabsForm.get('Modulo')?.touched">
+                        <span>Selecciona el módulo  <strong>es obligatorio</strong></span>
                     </div>
-                  </div>
-                </div>
-                <hr>
-                <!-- Combo Box para el tipo -->
-                <div class="card">
+                </div> <!--Aqui cierra el div mb-3-->
+                <div class="mb-3">
                   <div class="card-header mi-color">
-                    <h5 class="card-title"> Seleccione El Tipo De Tramite</h5>
+                    <h5 class="card-title">Fecha</h5>
                   </div>
-                  <div class="card-body">
-                    <div class="form-group">
-
-                      <select class="form-control" id="cmbxTramite" name="moduloCita">
-                        <option value="t1">Pago De Tenencia</option>
-                        <option value="t2">Pago De multa</option>
-
-                      </select>
-                    </div>
-                  </div>
+                  <input type="date" class="form-control"  formControlName="Fecha" placeholder="Fecha">
+                  <div class="text-danger" *ngIf="tabsForm.get('Fecha')?.hasError('required') && tabsForm.get('Fecha')?.touched">
+                    <span>Selecciona la fecha de la cita  <strong>es obligatoria</strong></span>
                 </div>
-
-                <!-- Botón de Envío -->
-                <hr>
-                <br>
-                <button type="submit" class="btn btn-primary BOTONCENTRO" style="font-size: medium;" (click)="CrearCita()">Agendar Cita ya</button>
-                <br>
-                <hr>
-              </form>
+                </div> <!-- Aqui cierra la fecha-->
+                <div class="mb-3">
+                  <div class="card-header mi-color">
+                    <h5 class="card-title"> Horario </h5>
+                  </div>
+                  <select class="form-control" formControlName="Hora" placeholder="Hora">
+                    <option value="9:10">9:10</option>
+                    <option value="9:20">9:20</option>
+                    <option value="9:30">9:30</option>
+                    <option value="9:40">9:40</option>
+                    <option value="9:50">9:50</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:10">10:10</option>
+                    <option value="10:20">10:20</option>
+                    <option value="10:30">10:30</option>
+                    <option value="10:40">10:40</option>
+                    <option value="10:50">10:50</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:10">11:10</option>
+                    <option value="11:20">11:20</option>
+                    <option value="11:30">11:30</option>
+                    <option value="11:40">11:40</option>
+                    <option value="11:50">11:50</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:10">12:10</option>
+                    <option value="12:20">12:20</option>
+                    <option value="12:30">12:30</option>
+                    <option value="12:40">12:40</option>
+                    <option value="12:50">12:50</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:10">13:10</option>
+                    <option value="13:20">13:20</option>
+                    <option value="13:30">13:30</option>
+                    <option value="13:40">13:40</option>
+                    <option value="13:50">13:50</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:10">14:10</option>
+                    <option value="14:20">14:20</option>
+                    <option value="14:30">14:30</option>
+                    <option value="14:40">14:40</option>
+                    <option value="14:50">14:50</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:10">15:10</option>
+                    <option value="15:20">15:20</option>
+                    <option value="15:30">15:30</option>
+                    <option value="15:40">15:40</option>
+                    <option value="15:50">15:50</option>                    
+                  </select>
+                  <div class="text-danger" *ngIf="tabsForm.get('Hora')?.hasError('required') && tabsForm.get('Hora')?.touched">
+                    <span>Seleccione la hora de la cita  <strong>es obligatoria</strong></span>
+                </div> 
+                </div> <!--Aqui cierra la hora-->
+                <div class="mb-3">
+                  <div class="card-header mi-color">
+                    <h5 class="card-title">Tipo de tramite</h5>
+                  </div>
+                  <select class="form-control" placeholder="TipoTramite" formControlName="TipoTramite">
+                    <option value="Pago de Tenecias">Pago de tenecias</option>
+                    <option value="Pago de Multa">Pago de multa</option>
+                  </select>
+                  <div class="text-danger" *ngIf="tabsForm.get('TipoTramite')?.hasError('required') && tabsForm.get('TipoTramite')?.touched">
+                    <span>Seleccione el tipo de tramite  <strong>es obligatoria</strong></span>
+                </div> 
+                </div> <!--Aqui cierra el tipo d etramite-->
+                <div class="mb-3">
+                  <button routerLink="/new-citas" class="btn btn-danger btn-lg float-start">Cancelar</button>
+                  <button type="submit" class="btn btn-primary btn-lg float-end" >Aceptar</button>
+              </div>
+            </form>
             </div>
             <div class="col-md-4">
               <hr>
@@ -169,29 +148,27 @@
         <div class="pestanas button">
           <button (click)="mostrarContenido(0)" [class.active]="tabActiva === 0">Agendar cita</button>
           <button (click)="mostrarContenido(1)" [class.active]="tabActiva === 1">Mis Citas</button>
-          
         </div>
-        
         <div class="card">
           <div class="card-header mi-color">
             <h5 class="card-title">Mis citas</h5>
           </div>
+        </div>
           <div class="card-body">
+            <br>
             <ng-container *ngIf="listarCitas.length > 0">
               <div class="col-md-4 mb-3" *ngFor="let citas of listarCitas">
                 <div class="card">
-                  <div class="card-body">
-                    
-                    <h5 class="card-title">{{citas.Fecha }}</h5>
-                    <p class="card-text">Num de Tramite{{ citas.numTramite }}</p>
-                    <!--<i [routerLink]="['/editar-lugar', lugares._id]" class="fas fa-edit text-primary"></i>-->
-                    <!--<i (click)="eliminarLugar(lugares._id)" class="fas fa-trash-alt text-danger"></i>-->
-                  </div>
-
-    
-    </div>
-
-   
-  </div>
+                    <h5 class="card-title">Fecha de la cita: {{citas.Fecha }}</h5>
+                    <p class="card-text">Hora: {{ citas.Hora }}</p>
+                    <p class="card-text">Tipo de Tramite: {{ citas.TipoTramite }}</p>
+                    <p class="card-text">Modulo : {{ citas.Modulo }}</p>
+                </div>
+              </div>
+              </ng-container>
+            </div>
+          </div>
+          </div>
+  <br>
   <app-footer></app-footer>
   

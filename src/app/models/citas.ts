@@ -1,16 +1,19 @@
 export class Citas{
     _id?: number;
-    idCita : Number;
-    Fecha: String;
+    idCita : number;
+    Fecha: string;
     Hora: string;
-    numTramite: String;
+    Modulo: string;
+    TipoTramite: string;
     idUsuario: number;
     idOficina: number;
-    constructor (idcita: number, fecha: string, hora: string, numtramite: String, idusuario: number, idoficina:number){
+    constructor (idcita: number, fecha: string, hora: string, modulo: string,
+        tipoTramite: string, idusuario: number, idoficina:number){
         this.idCita = idcita;
         this.Fecha = fecha;
         this.Hora = hora;
-        this.numTramite = numtramite;
+        this.Modulo = modulo;
+        this.TipoTramite = tipoTramite;
         this.idUsuario = idusuario;
         this.idOficina = idoficina;
     }
