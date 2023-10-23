@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class TabsComponent {
   tabActiva: number = 0;
 
+
   mostrarContenido(index: number) {
     this.tabActiva = index;
   }
@@ -26,6 +27,7 @@ export class TabsComponent {
     }, (error: any)=>{
       console.log(error);
     });
-  }// cita
+  }// obtenercita
   
 }
+

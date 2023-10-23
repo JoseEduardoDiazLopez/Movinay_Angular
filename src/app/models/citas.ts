@@ -3,10 +3,10 @@ export class Citas{
     idCita : Number;
     Fecha: String;
     Hora: string;
-    numTramite: number;
+    numTramite: String;
     idUsuario: number;
     idOficina: number;
-    constructor (idcita: number, fecha: string, hora: string, numtramite: number, idusuario: number, idoficina:number){
+    constructor (idcita: number, fecha: string, hora: string, numtramite: String, idusuario: number, idoficina:number){
         this.idCita = idcita;
         this.Fecha = fecha;
         this.Hora = hora;
