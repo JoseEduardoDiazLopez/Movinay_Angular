@@ -1,1 +1,59 @@
-<p>crear-denuncia works!</p>
+<app-nav></app-nav>
+<br>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{ titulo | uppercase}}</span>
+                    <form class="mt-5" [formGroup]="denunciasForm" (ngSubmit)="agregarDenuncia()">
+                        <div class="mb-3">
+                            <!-- Descripcion -->
+                            <input type="text" formControlName="Descripcion" class="form-control" placeholder="Descripcion">
+                            <div class="text-danger" *ngIf="denunciasForm.get('Descripcion')?.hasError('required') && denunciasForm.get('Descripcion')?.touched">
+                                <span>La descripcion de la denuncia <strong>es obligatoria</strong></span>
+                            </div>
+                        </div><!--Aqui cirra el div mb-3-->
+                        
+                        <!-- Foto -->
+                        <div class="mb-3">
+                            <input type="text" formControlName="Foto" class="form-control" placeholder="Foto">
+                            <div class="text-danger" *ngIf="denunciasForm.get('Foto')?.hasError('required') && denunciasForm.get('Foto')?.touched">
+                                <span>La foto de la denuncia <strong>es obligatoria</strong></span>
+                            </div>
+                        </div> <!--Aqui cirra el div mb-3-->
+                        
+                        <!-- Calles -->
+                        <div class="mb-3">
+                            <input type="text" formControlName="Calles" class="form-control" placeholder="Calles">
+                            <div class="text-danger" *ngIf="denunciasForm.get('Calles')?.hasError('required') && denunciasForm.get('Calles')?.touched">
+                                <span>Las calles de la denuncia <strong>son obligatorias</strong></span>
+                            </div>
+                        </div> <!--Aqui cirra el div mb-3-->
+                        
+                        <!-- Colonia -->
+                        <div class="mb-3">
+                            <input type="text" formControlName="Colonia" class="form-control" placeholder="Colonia">
+                            <div class="text-danger" *ngIf="denunciasForm.get('Colonia')?.hasError('required') && denunciasForm.get('Colonia')?.touched">
+                                <span>La colonia de la denuncia <strong>es obligatoria</strong></span>
+                            </div>
+                        </div> <!--Aqui cirra el div mb-3-->
+                        
+                        <!-- Municipio -->
+                        <div class="mb-3">
+                            <input type="text" formControlName="Municipio" class="form-control" placeholder="Municipio">
+                            <div class="text-danger" *ngIf="denunciasForm.get('Municipio')?.hasError('required') && denunciasForm.get('Municipio')?.touched">
+                                <span>El municipio de la denuncia <strong>es obligatorio</strong></span>
+                            </div> 
+                        </div> <!-- aqui cierra-->
+                        <div class="mb-3">
+                            <button routerLink="/denuncias" class="btn btn-primary btn-lg float-start">Regresar</button>
+                            <button type="submit" class="btn btn-danger btn-lg float-end" >Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

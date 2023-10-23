@@ -9,13 +9,13 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { PagoEpComponent } from './components/pago-ep/pago-ep.component';
 import { PagoEtComponent } from './components/pago-et/pago-et.component';
 import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
-
+import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denuncia.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent}, // home principal
   {path: 'new-cita', component: CitasCComponent }, // citas
   {path: 'denuncias', component: DenunciasComponent}, //listar denuncias
-  {path: 'crear-denuncia', component: DenunciasComponent}, // form denuncias
+  {path: 'crear-denuncia', component: CrearDenunciaComponent}, // form denuncias
   {path: 'tramites', component: TramitesComponent},
   {path: 'sesion',component: LoginComponent},
   {path: 'registro',component: RegisterComponent},
