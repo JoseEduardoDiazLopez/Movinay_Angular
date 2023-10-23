@@ -21,6 +21,24 @@
             <!-- Columna izquierda para el formulario -->
             <div class="col-md-8">
               <form>
+                <hr>
+                    <!-- Combo Box para el Módulo -->
+                    <div class="card">
+                      <div class="card-header mi-color">
+                        <h5 class="card-title"> Seleccione El Modulo de Atencion De Su Cita</h5>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group">
+    
+       
+                          <select class="form-control" id="moduloCita" name="moduloCita">
+                            <option value="modulo1">Módulo 1</option>
+                            <option value="modulo2">Módulo 2</option>
+    
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                 <!-- Selector de Fecha -->
                 <div class="form-group">
                   <hr>
@@ -90,15 +108,15 @@
                     </div>
                   </div>
                 </div>
-                <!-- Combo Box para el Módulo -->
+                <hr>
+                <!-- Combo Box para el tipo -->
                 <div class="card">
                   <div class="card-header mi-color">
-                    <h5 class="card-title"> Seleccione El Modulo de Atencion De Su Cita</h5>
+                    <h5 class="card-title"> Seleccione El Tipo De Tramite</h5>
                   </div>
                   <div class="card-body">
                     <div class="form-group">
 
-                      <label for="moduloCita">Módulo:</label>
                       <select class="form-control" id="moduloCita" name="moduloCita">
                         <option value="modulo1">Módulo 1</option>
                         <option value="modulo2">Módulo 2</option>
@@ -144,10 +162,6 @@
       <app-footer></app-footer>
     </div> 
   </div> 
-
-
-
-
 
     <!-- pestaña 2 -->
     <div [hidden]="tabActiva !== 1">
