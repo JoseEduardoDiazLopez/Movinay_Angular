@@ -21,7 +21,7 @@
               <li><a routerLink="/Pagoprincipal">Pagos de servicios</a></li>
               <li><a routerLink="/denuncias">Denuncias</a></li>
               <!-- Comprueba si el usuario está logueado y muestra su nombre si es así -->
-              <li *ngIf="userIsLoggedIn()"><a routerLink="/cuenta">Cuenta</a></li>
+              <li *ngIf="userIsLoggedIn()">{{guardarUsuario}}<a routerLink="/cuenta">Cuenta</a></li>
               <!-- Si el usuario está logueado, muestra un botón de cierre de sesión -->
               <li *ngIf="userIsLoggedIn()"><a (click)="logout()">Cerrar Sesión</a></li>
               <!-- Si el usuario no está logueado, muestra un enlace de inicio de sesión -->

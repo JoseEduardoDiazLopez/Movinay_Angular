@@ -11,9 +11,9 @@ export class AuthService {
   URL1='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/register';
   URL2='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/login';
 
-  private currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
+  public currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
   public currentUser: Observable<User | null> = this.currentUserSubject.asObservable();
-
+  public usuarioCad : string = '';
   constructor(private http: HttpClient,private toastr: ToastrService) { }
 
   register(user: User): Observable<any> {
@@ -21,8 +21,8 @@ export class AuthService {
       map((response: any) => {
         const loggedInUser: User = response.user;
         this.currentUserSubject.next(loggedInUser);
+          this.usuarioCad = user.username;
         return loggedInUser;
-
       })
     );
   }

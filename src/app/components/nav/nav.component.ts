@@ -13,6 +13,7 @@ export class NavComponent {
   menuVariable: boolean = false;
   currentUser: User | null = null;
   currentUserName: string = '';
+  guardarUsuario : string = '';
   constructor(private authService: AuthService,private router: Router,private toastr: ToastrService) {
 
   }
@@ -38,6 +39,8 @@ export class NavComponent {
     this.authService.currentUser.subscribe((user: User | null) => {
       this.currentUser = user;
       this.currentUserName = user ? user.username : '';
+      this.guardarUsuario= this.authService.usuarioCad
     });
+    
   }  
 }
