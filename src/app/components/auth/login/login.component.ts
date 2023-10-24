@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class LoginComponent {
   registerUserr: User = new User('',''); // Initialize an empty User object for registration
   loginUserr: User = new User('','');    // Initialize an empty User object for login
+  idUsuario =0;
   resetFields() {
     this.registerUserr = {
       username: '',

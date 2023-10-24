@@ -32,6 +32,7 @@ export class AuthService {
       map((response: any) => {
         const loggedInUser: User = response.user;
         this.currentUserSubject.next(loggedInUser);
+        this.usuarioCad = user.username;
         return loggedInUser;
       })
     );

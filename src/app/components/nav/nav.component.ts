@@ -34,7 +34,9 @@ export class NavComponent {
     this.authService.logout(); // Asegúrate de que AuthService tenga un método logout
     this.router.navigate(['/home']);
   }
-
+  guardarUser() : string{
+    return this.guardarUsuario
+  }
   ngOnInit() {
     this.authService.currentUser.subscribe((user: User | null) => {
       this.currentUser = user;
