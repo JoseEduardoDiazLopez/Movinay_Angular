@@ -5,10 +5,10 @@ export class Citas{
     Hora: string;
     Modulo: string;
     TipoTramite: string;
-    idUsuario: number;
+    idUsuario: string;
     idOficina: number;
     constructor (idcita: number, fecha: string, hora: string, modulo: string,
-        tipoTramite: string, idusuario: number, idoficina:number){
+        tipoTramite: string, idusuario: string, idoficina:number){
         this.idCita = idcita;
         this.Fecha = fecha;
         this.Hora = hora;

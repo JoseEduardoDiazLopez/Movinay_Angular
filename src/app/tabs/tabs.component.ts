@@ -3,8 +3,10 @@ import { Citas } from '../models/citas';
 import { CitasService } from '../services/citas.service';
 import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
@@ -15,12 +17,14 @@ export class TabsComponent {
   tabsForm: FormGroup;
   titulo = 'Añadir denuncia'
   id: string;
+  guardarId : number | undefined;
 
   mostrarContenido(index: number) {
     this.tabActiva = index;
   }
    listarCitas: Citas[] = [];
-  constructor (private _CitasService: CitasService, private toastr: ToastrService,private fb: FormBuilder,private router: Router, private aRouter: ActivatedRoute){
+  constructor (private _CitasService: CitasService, private toastr: ToastrService,private fb: FormBuilder,private router: Router, private aRouter: ActivatedRoute,
+    private authService: AuthService){
     this.tabsForm = this.fb.group({
       idCita:['', Validators.required],
       Fecha:['', Validators.required],
@@ -34,6 +38,8 @@ export class TabsComponent {
   }
   ngOnInit(): void{
     this.obtenerCitas();
+    this.guardarId = this.authService.getUserId();
+    this.tabsForm.get('idUsuario')?.setValue(this.guardarId);
   }
   obtenerCitas(){
     this._CitasService.getCitas().subscribe((data: Citas[]) => {
@@ -73,6 +79,7 @@ export class TabsComponent {
         this.toastr.success('Se inserto una nueva cita..','Cita insertada!');
         this.router.navigate(['/new-cita']);
         this.tabsForm.reset();
+        this.obtenerCitas();
       }, error=>{
         console.log(error);
         this.tabsForm.reset();

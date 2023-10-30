@@ -21,6 +21,14 @@
             <!-- Columna izquierda para el formulario -->
             <div class="col-md-8">
               <form class="mt-5" [formGroup]="tabsForm" (ngSubmit)="agregarCita()">
+                <div class="mb-3">
+                  <input type="text" 
+                  formControlName="idUsuario"
+                  class="form-control"
+                  placeholder="idUsuario"
+                  [value]="guardarId"
+                  [readonly]="true">
+                </div>
                 
                 <!-- Modulo -->
                 <div class="mb-3">

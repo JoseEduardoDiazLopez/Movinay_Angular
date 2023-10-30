@@ -8,20 +8,31 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class AuthService {
-  URL1='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/register';
-  URL2='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/login';
-
+  //URL1='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/register';
+  //URL2='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/login';
+  URL1='http://localhost:3000/api/autenticacion/register';
+  URL2='http://localhost:3000/api/autenticacion/login'
   public currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
   public currentUser: Observable<User | null> = this.currentUserSubject.asObservable();
   public usuarioCad : string = '';
+  public userId: number | undefined;
   constructor(private http: HttpClient,private toastr: ToastrService) { }
+  
+  setUserId(id: number) {
+    this.userId = id;
+  }
 
+  getUserId() {
+    return this.userId;
+  }
   register(user: User): Observable<any> {
     return this.http.post(this.URL1, user).pipe(
       map((response: any) => {
         const loggedInUser: User = response.user;
         this.currentUserSubject.next(loggedInUser);
-          this.usuarioCad = user.username;
+        const userId = response.userId;
+        this.setUserId(userId);
+        this.usuarioCad = user.username;
         return loggedInUser;
       })
     );
@@ -32,6 +43,8 @@ export class AuthService {
       map((response: any) => {
         const loggedInUser: User = response.user;
         this.currentUserSubject.next(loggedInUser);
+        const userId = response.userId;
+        this.setUserId(userId);
         this.usuarioCad = user.username;
         return loggedInUser;
       })

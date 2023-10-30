@@ -14,6 +14,7 @@ export class NavComponent {
   currentUser: User | null = null;
   currentUserName: string = '';
   guardarUsuario : string = '';
+  guardarId : number | undefined;
   constructor(private authService: AuthService,private router: Router,private toastr: ToastrService) {
 
   }
@@ -32,7 +33,7 @@ export class NavComponent {
   // Cierra la sesión del usuario
   logout() {
     this.authService.logout(); // Asegúrate de que AuthService tenga un método logout
-    this.router.navigate(['/home']);
+    this.router.navigate(['/sesion']);
   }
   guardarUser() : string{
     return this.guardarUsuario
@@ -42,6 +43,7 @@ export class NavComponent {
       this.currentUser = user;
       this.currentUserName = user ? user.username : '';
       this.guardarUsuario= this.authService.usuarioCad
+      this.guardarId = this.authService.getUserId();
     });
     
   }  
