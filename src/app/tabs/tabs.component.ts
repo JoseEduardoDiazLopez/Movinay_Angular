@@ -66,14 +66,22 @@ export class TabsComponent {
       idUsuario: this.tabsForm.get('idUsuario')?.value,
       idOficina: this.tabsForm.get('idOficina')?.value
     }
+    const camposParaRestablecer = {
+      Modulo: '',
+      Fecha: '',
+      Hora: '',
+      TipoTramite: ''
+    };
     if(this.id !== null){
       this._CitasService.editarCitas(this.id, CITAS).subscribe(data =>{
         this.toastr.info('Se actualizó la cita.','Cita actualizada!');
         this.router.navigate(['/new-cita']);
-        this.tabsForm.reset();
+        this.tabsForm.reset()
+        this.ngOnInit()
       }, error => {
           console.log(error);
-          this.tabsForm.reset();
+          this.tabsForm.reset()
+          this.ngOnInit()
       }
       )
     }else{
@@ -82,8 +90,8 @@ export class TabsComponent {
       this._CitasService.guardarCitas(CITAS).subscribe(data =>{
         this.toastr.success('Se inserto una nueva cita..','Cita insertada!');
         this.router.navigate(['/new-cita']);
-        this.tabsForm.reset();
-        //this.obtenerCitas();
+        this.tabsForm.reset()
+        this.ngOnInit()
       }, error=>{
         console.log(error);
         this.tabsForm.reset();
