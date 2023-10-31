@@ -33,7 +33,7 @@ export class HomeComponent {
     this.renderer.setAttribute(
       twitterAnchor,
       'href',
-      'https://twitter.com/MiguelANavarroQ?ref_src=twsrc%5Etfw'
+      'https://twitter.com/MovilidadNay?ref_src=twsrc%5Etfw'
     );
 
     // Crea el script para cargar el widget de Twitter
