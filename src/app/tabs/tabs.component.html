@@ -162,21 +162,25 @@
             <h5 class="card-title">Mis citas</h5>
           </div>
         </div>
-          <div class="card-body">
-            <br>
-            <ng-container *ngIf="listarCitas.length > 0">
-              <div class="col-md-4 mb-3" *ngFor="let citas of listarCitas">
+        <div class="card-body">
+          <br>
+          <ng-container *ngIf="listarCitas.length > 0">
+            <div class="row">
+              <div class="col-md-4 mb-3" *ngFor="let cita of listarCitas">
                 <div class="card">
-                    <h5 class="card-title">Fecha de la cita: {{citas.Fecha }}</h5>
-                    <p class="card-text">Hora: {{ citas.Hora }}</p>
-                    <p class="card-text">Tipo de Tramite: {{ citas.TipoTramite }}</p>
-                    <p class="card-text">Modulo : {{ citas.Modulo }}</p>
+                  <h5 class="card-title">Fecha de la cita: {{ cita.Fecha | date:'dd/MM/yyyy' }}</h5>
+                  <p class="card-text">Hora: {{ cita.Hora }}</p>
+                  <p class="card-text">Tipo de Trámite: {{ cita.TipoTramite }}</p>
+                  <p class="card-text">Módulo: {{ cita.Modulo }}</p>
                 </div>
               </div>
-              </ng-container>
             </div>
-          </div>
-          </div>
+          </ng-container>
+          
+        </div>
+      </div>
+    </div>
+    
   <br>
   <app-footer></app-footer>
   

@@ -15,14 +15,13 @@ import { AuthService } from 'src/app/services/auth.service';
 export class TabsComponent {
   tabActiva: number = 0;
   tabsForm: FormGroup;
-  titulo = 'Añadir denuncia'
   id: string;
-  guardarId : number | undefined;
-
+  guardarId!: number;
   mostrarContenido(index: number) {
     this.tabActiva = index;
   }
    listarCitas: Citas[] = [];
+   
   constructor (private _CitasService: CitasService, private toastr: ToastrService,private fb: FormBuilder,private router: Router, private aRouter: ActivatedRoute,
     private authService: AuthService){
     this.tabsForm = this.fb.group({
@@ -36,11 +35,19 @@ export class TabsComponent {
     })
     this.id = this.aRouter.snapshot.paramMap.get('id')!;
   }
-  ngOnInit(): void{
-    this.obtenerCitas();
+  ngOnInit(): void {
     this.guardarId = this.authService.getUserId();
     this.tabsForm.get('idUsuario')?.setValue(this.guardarId);
+    this.obtenerCitasU()
   }
+  obtenerCitasU(){
+    this._CitasService.consultarCitas(this.guardarId).subscribe((data: Citas[]) => {
+      console.log(data); // Verifica los datos en la consola
+      this.listarCitas = data;
+    }, (error: any)=>{
+      console.log(error);
+    });
+  }  
   obtenerCitas(){
     this._CitasService.getCitas().subscribe((data: Citas[]) => {
       console.log(data);
@@ -49,9 +56,6 @@ export class TabsComponent {
       console.log(error);
     });
   }// obtener cita
-  editarCitas(){
-
-  }
   agregarCita(){
     const CITAS : Citas = {
       idCita: this.tabsForm.get('idCita')?.value,
@@ -79,7 +83,7 @@ export class TabsComponent {
         this.toastr.success('Se inserto una nueva cita..','Cita insertada!');
         this.router.navigate(['/new-cita']);
         this.tabsForm.reset();
-        this.obtenerCitas();
+        //this.obtenerCitas();
       }, error=>{
         console.log(error);
         this.tabsForm.reset();

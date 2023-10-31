@@ -12,7 +12,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class LoginComponent {
   registerUserr: User = new User('',''); // Initialize an empty User object for registration
   loginUserr: User = new User('','');    // Initialize an empty User object for login
-  idUsuario : number | undefined;
   resetFields() {
     this.registerUserr = {
       username: '',
@@ -25,19 +24,6 @@ export class LoginComponent {
     };
   }
   constructor(private authService: AuthService,private toastr: ToastrService,private router: Router) { }
-
-  registerUser() {
-    this.authService.register(this.registerUserr).subscribe(
-      (response) => {
-        console.log('Registration successful', response);
-        this.toastr.info('Registro con éxito','¡Atención!',);
-      },
-      (error) => {
-        console.error('Registration error', error);
-      }
-    );
-  }
-
   loginUser() {
     this.authService.login(this.loginUserr).subscribe(
       (response) => {

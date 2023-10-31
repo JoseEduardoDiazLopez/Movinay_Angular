@@ -28,29 +28,14 @@ export class RegisterComponent {
     this.authService.register(this.registerUserr).subscribe(
       (response) => {
         console.log('Registration successful', response);
-        this.toastr.info('Registro con éxito','¡Atención!',);
+        this.toastr.info('Registro con éxito. Inicie sesión de nuevo para guardar cambios.','¡Atención!',);
         this.resetFields();
-        this.router.navigate(['/home']);
+        this.authService.logout();
+        this.router.navigate(['/sesion']);
       },
       (error) => {
         console.error('Registration error', error);
         this.toastr.info('Hubo un error al registrar.','¡Atención!',);
-        this.resetFields();
-      }
-    );
-  }
-
-  loginUser() {
-    this.authService.login(this.loginUserr).subscribe(
-      (response) => {
-        console.log('Login successful', response);
-        this.toastr.info('Sesion con éxito','¡Atención!',);
-        this.resetFields();
-        this.router.navigate(['/home']);
-      },
-      (error) => {
-        console.error('Login error', error);
-        this.toastr.info('Error al iniciar sesión','¡Atención!',);
         this.resetFields();
       }
     );

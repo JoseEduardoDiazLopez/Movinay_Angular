@@ -6,8 +6,8 @@ import { Citas } from '../models/citas'
   providedIn: 'root'
 })
 export class CitasService {
-  URL='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/citas';
-  //URL='http://localhost:3000/api/citas'
+  //URL='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/citas';
+  URL='http://localhost:3000/api/citas/'
   constructor(private http: HttpClient) { }
   getCitas(): Observable<any>{
     return this.http.get(this.URL);
@@ -24,7 +24,8 @@ export class CitasService {
   editarCitas(id: string, exper: Citas): Observable<any>{
     return this.http.put(this.URL+id, exper);
   }
-  consultarCitas(nombre: string): Observable<any>{
+  consultarCitas(nombre: number): Observable<any>{
     return this.http.get(this.URL + nombre);
   }
+  
 }
