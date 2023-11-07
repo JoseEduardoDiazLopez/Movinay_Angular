@@ -3,26 +3,61 @@
   <br>
   <br>
   <br>
-  <div class="container">
+  <div id="main-wrapper" class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="auth-container text-center">
-          <h2>Iniciar Sesión</h2>
-          <form (submit)="loginUser()">
-            <div class="form-group">
-              <label for="loginUsername">Nombre de usuario:</label>
-              <input type="text" id="loginUsername" [(ngModel)]="loginUserr.username" name="loginUsername" class="form-control" required>
+        <div class="col-xl-10">
+            <div class="card border-0">
+                <div class="card-body p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <h3 class="h4 font-weight-bold text-theme">Login</h3>
+                                </div>
+
+                                <h6 class="h5 mb-0">Autenticación</h6>
+                                <p class="text-muted mt-2 mb-5">Ingresa tu usuario y tu contraseña para iniciar sesión.</p>
+
+                                <form (submit)="loginUser()">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Usuario</label>
+                                        <input type="text" id="loginUsername" [(ngModel)]="loginUserr.username" name="loginUsername" class="form-control" required>
+                                    </div>
+                                    <div class="form-group mb-5">
+                                        <label for="exampleInputPassword1">Contraseña</label>
+                                        <input type="password" id="loginPassword" [(ngModel)]="loginUserr.password" name="loginPassword" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-theme" style="text-align: center;">Login</button>
+                                    <!--<a href="#l" class="forgot-link float-right text-primary">Forgot password?</a>-->
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-none d-lg-inline-block">
+                            <div class="account-block rounded-right">
+                                <div class="overlay rounded-right"></div>
+                                <div class="account-testimonial">
+                                    <h4 class="text-white mb-4">Estamos mejorando nuestro sitio web!</h4>
+                                    <p class="lead text-white">La plataforma se encuentra en constante actualización, ayudanos a mejorar este sitio. Envia tu sugerencia a nuestro correo losonceequipo@ittepic.edu.mx"</p>
+                                    <p>- Los Once Desarolladores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end card-body -->
             </div>
-            <div class="form-group">
-              <label for="loginPassword">Contraseña:</label>
-              <input type="password" id="loginPassword" [(ngModel)]="loginUserr.password" name="loginPassword" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-          </form>
-          <p>¿No tienes una cuenta? <a routerLink="/registro">Regístrate</a></p>
+            <!-- end card -->
+
+            <p class="text-muted text-center mt-3 mb-0">¿No tienes una cuenta? <a routerLink="/registro" class="text-primary ml-1">Registrarme ahora</a></p>
+
+            <!-- end row -->
+
         </div>
-      </div>
+        <!-- end col -->
     </div>
-  </div>
+    <!-- Row -->
+</div>
   
 </body>

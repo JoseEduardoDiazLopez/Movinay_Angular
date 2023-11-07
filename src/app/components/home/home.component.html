@@ -1,7 +1,7 @@
 <app-nav></app-nav>
-<body style="background-color: #D4C19C;">
+<body style="background-color: #ffffff;">
 
-  <!-------------->
+  <!-------#D4C19C;------->
   <ngx-slick-carousel class="carousel" #slickModule [config]="slideConfig">
     <div ngxSlickItem *ngFor="let image of images">
       <img width="800" height="400" [src]="image?.img" alt="img">
@@ -15,7 +15,6 @@
   </div>
   
   <br>
-  
-  <div id="twitter-widget-container"></div>
+  <!--<div id="twitter-widget-container"></div>-->
   <app-footer></app-footer>
 </body>
