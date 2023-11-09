@@ -8,10 +8,14 @@ import {map,startWith} from 'rxjs/operators'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  slideConfig ={
-    slidesToShow:1,
-    slidesToScroll:1
-  }
+  slideConfig = {
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   images = [
     {img: "assets/images/banner1.jpg"},
     {img: "assets/images/banner2.jpg"},

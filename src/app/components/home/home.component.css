@@ -14,7 +14,7 @@
 }
 /* Establecer el ancho y centrar el carousel */
 .carousel {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -61,3 +61,13 @@
   }
 }
 
+.subheader-left h4 {
+  background-color: #CCCCCC; /* Color de fondo gris */
+  padding: 8px; /* Espaciado interno para mayor legibilidad */
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.subheader-left h5 {
+  color: #FFFFFF; /* Color de texto blanco */
+}

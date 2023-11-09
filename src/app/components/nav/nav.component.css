@@ -10,7 +10,7 @@ body {
 header {
   position: relative;
   padding: 10px 0;
-  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #f19583 0, #e68379 25%, #d86c6c 50%, #c95561 75%, #bd425b 100%);
   z-index: 1;
 }
 
@@ -25,16 +25,15 @@ header {
 .menu ul {
   padding: 0;
   margin: 0;
-  text-align: center;
+  text-align: right;
 }
-
 .menu ul li {
   display: inline-block;
 }
 
 .menu ul li a {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   font-weight: bold;
   padding: 10px;
   text-transform: uppercase;
@@ -42,8 +41,7 @@ header {
 }
 
 .menu ul li a:hover {
-  color: #fa5757;
-  background-color: #ffffff;
+  color: rgb(121, 14, 14);
   border-radius: 5px;
 }
 
@@ -55,7 +53,7 @@ header {
     top: 0;
     width: 280px;
     height: 100%;
-    background: #ffffff;
+    background: #000000;
     transition: 0.4s ease-in-out;
     z-index: 999;
   }
@@ -77,14 +75,14 @@ header {
   .menu_icon {
     display: inline-block;
     position: relative;
-    right: -80px;
-    top: -30px;
+    right: -100px;
+    top: 10px;
   }
 
   .menu_icon span {
     width: 32px;
     height: 3px;
-    background: #000000;
+    background: #ffffff;
     display: block;
     transition: 0.2s ease-in-out;
   }
@@ -119,8 +117,4 @@ header {
     background-color: #ffffff;
     border-radius: 5px;
   }
-}
-
-.logo2 {
-  height: 40px;
 }
