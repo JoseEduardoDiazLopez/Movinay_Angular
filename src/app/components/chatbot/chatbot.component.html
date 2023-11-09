@@ -1,0 +1,24 @@
+<div class="chatbot-container" *ngIf="isChatbotOpen">
+    <div class="chat-header">
+      <span>Chatbot</span>
+      <button (click)="toggleChatbot()" style="color: black;">
+        <i class="fas fa-times"></i> <!-- Icono de cerrar -->
+      </button>
+    </div>
+    <div class="chat-messages">
+      <div class="message" *ngFor="let message of chatMessages">
+        {{ message }}
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" [(ngModel)]="userInput" placeholder="Escribe un mensaje..." (keyup.enter)="sendMessage()" />
+      <button (click)="sendMessage()">Enviar</button>
+    </div>
+  </div>
+  
+<!-- Cambia el botón a un enlace de texto -->
+<a class="open-chatbot-link" *ngIf="!isChatbotOpen" (click)="toggleChatbot()">Chatbot (Abre aqui)</a>
+
+<!-- Resto del código se mantiene igual -->
+
+  

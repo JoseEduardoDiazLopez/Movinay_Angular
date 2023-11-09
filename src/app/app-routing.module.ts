@@ -11,6 +11,7 @@ import { PagoEtComponent } from './components/pago-et/pago-et.component';
 import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
 import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denuncia.component';
 import { PanelusuarioComponent } from './components/panelusuario/panelusuario.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent}, // home principal
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'Pagotarjeta',component: PagoEtComponent},
   {path: 'Pagoefectivo',component: PagoEeComponent},
   {path: 'cuenta',component: PanelusuarioComponent},
+  {path: 'chatbot',component:ChatbotComponent},
   {path: '**', redirectTo:'home',pathMatch:"full"} // Si no existe la ruta, que todo lo retorne a principal
 ];
 

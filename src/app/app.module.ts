@@ -26,6 +26,7 @@ import { PagoEtComponent } from './components/pago-et/pago-et.component';
 import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PanelusuarioComponent } from './components/panelusuario/panelusuario.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { PanelusuarioComponent } from './components/panelusuario/panelusuario.co
     PagoEeComponent,
     FooterComponent,
     PanelusuarioComponent,
+    ChatbotComponent,
   
   ],
   imports: [
