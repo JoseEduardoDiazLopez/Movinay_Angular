@@ -58,3 +58,26 @@ width: 500px; /* Ancho personalizado */
     border-radius: 50%; 
     overflow: hidden;
   }
+  .cita-card {
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .cita-title {
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .card-text i {
+    margin-right: 5px;
+    color: #007bff; /* Cambia el color de los iconos según tu preferencia */
+  }
+  .table i {
+    margin-right: 5px;
+    color: #007bff; /* Cambia el color de los iconos según tu preferencia */
+  }
+  

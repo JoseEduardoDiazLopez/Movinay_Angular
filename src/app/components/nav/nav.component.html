@@ -14,13 +14,11 @@
               <li><a routerLink="/home">Quienes Somos</a></li>
               <li><a routerLink="/home">Transparencia</a></li>
               <li><a routerLink="/home">Nuestros servicios</a></li>
-              <!--<li><a routerLink="/new-cita">Haz una cita</a></li>
-              <li><a routerLink="/Pagoprincipal">Pagos de servicios</a></li>
-              <li><a routerLink="/denuncias">Denuncias</a></li>-->
               <!-- Comprueba si el usuario está logueado y muestra su nombre si es así -->
               <!--<li *ngIf="userIsLoggedIn()">Bienvenido : {{guardarUsuario}}<a routerLink="/cuenta">Cuenta</a></li>-->
               <!-- Si el usuario está logueado, muestra un botón de cierre de sesión -->
              <li *ngIf="userIsLoggedIn()"><a (click)="logout()">Cerrar Sesión</a></li>
+             <li *ngIf="userIsLoggedIn()"><a routerLink="/mi-cuenta">Mi cuenta</a></li>
               <!-- Si el usuario no está logueado, muestra un enlace de inicio de sesión -->
               <li *ngIf="!userIsLoggedIn()"><a routerLink="/sesion"><i class="fas fa-user"></i> Iniciar Sesión</a></li>
               <li (click)="closeMenu()" class="close-session"><a><i class="fas fa-times"></i> Cerrar Menú</a></li>

@@ -12,6 +12,7 @@ import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
 import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denuncia.component';
 import { PanelusuarioComponent } from './components/panelusuario/panelusuario.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent}, // home principal
@@ -24,9 +25,9 @@ const routes: Routes = [
   {path: 'Pagoprincipal',component: PagoEpComponent},
   {path: 'Pagotarjeta',component: PagoEtComponent},
   {path: 'Pagoefectivo',component: PagoEeComponent},
-  {path: 'cuenta',component: PanelusuarioComponent},
+  {path: 'mi-cuenta',component: PanelusuarioComponent},
   {path: 'chatbot',component:ChatbotComponent},
-  {path: '**', redirectTo:'home',pathMatch:"full"} // Si no existe la ruta, que todo lo retorne a principal
+  {path:'**',component:PagenotfoundComponent}, // Si no existe la ruta, que todo lo retorne a principal
 ];
 
 @NgModule({
