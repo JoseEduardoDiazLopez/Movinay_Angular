@@ -14,6 +14,29 @@
             <label for="password">Contraseña:</label>
             <input type="password" id="password" [(ngModel)]="registerUserr.password" name="password" class="form-control" required>
           </div>
+          <div class="form-group">
+            <label for="email">Correo electronico:</label>
+            <input type="email" id="email" [(ngModel)]="registerUserr.email" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="RFC">RFC:</label>
+            <input type="RFC" id="RFC" [(ngModel)]="registerUserr.RFC" name="RFC" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="nombre" id="nombre" [(ngModel)]="registerUserr.nombre" name="nombre" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="ApellidoPaterno">Apellido Paterno:</label>
+            <input type="ApellidoPaterno" id="ApellidoPaterno" [(ngModel)]="registerUserr.ApellidoPaterno" name="ApellidoPaterno" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="ApellidoMaterno">Apellido Materno:</label>
+            <input type="ApellidoMaterno" id="ApellidoMaterno" [(ngModel)]="registerUserr.ApellidoMaterno" name="ApellidoMaterno" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <input type="date" class="form-control" id="FechaNac" [(ngModel)]="registerUserr.FechaNac" name="FechaNac" class="form-control" required>
+          </div>
           <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
         </form>
         <p class="text-center">¿Ya tienes una cuenta? <a routerLink="/sesion">Iniciar Sesión</a></p>

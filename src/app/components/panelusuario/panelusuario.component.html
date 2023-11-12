@@ -9,14 +9,13 @@
           <ul class="list-group">
             <li class="list-group-item" (click)="showComponent('citas')">CITAS</li>
             <li class="list-group-item" (click)="showComponent('pagos')">PAGOS</li>
+            <li class="list-group-item" (click)="showComponent('denuncias')">DENUNCIAS</li>
+            <li class="list-group-item" (click)="showComponent('usuarios')">USUARIOS</li>
             <li class="list-group-item">
               <a [routerLink]="['/home']">REGRESAR PAGINA PRINCIPAL</a>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="text-center mb-3">
-        <p>Versión 0.1</p>
       </div>
     </div>
     <div class="col-9 d-flex justify-content-center align-items-center">
@@ -28,6 +27,12 @@
       </ng-container>
       <ng-container *ngIf="currentComponent === 'home'">
         <router-outlet></router-outlet>
+      </ng-container>
+      <ng-container *ngIf="currentComponent === 'denuncias'">
+        <app-denuncias></app-denuncias>
+      </ng-container>
+      <ng-container *ngIf="currentComponent === 'usuarios'">
+        <app-admin-vista-cita></app-admin-vista-cita>
       </ng-container>
     </div>
   </div>

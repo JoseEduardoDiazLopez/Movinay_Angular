@@ -27,5 +27,10 @@ export class CitasService {
   consultarCitas(nombre: number): Observable<any>{
     return this.http.get(this.URL + nombre);
   }
-  
+  obtenerCitaPorId(id: string): Observable<Citas> {
+    return this.http.get<Citas>(this.URL + id);
+  }
+  actualizarEstadoCita(id: string, estado: string): Observable<any> {
+    return this.http.put(`${this.URL}${id}/validar`, { EstadoCita: estado });
+  }
 }

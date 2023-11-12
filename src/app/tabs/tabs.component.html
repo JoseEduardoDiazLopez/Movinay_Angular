@@ -173,6 +173,11 @@
                     <p class="card-text"><i class="far fa-clock"></i> Hora: {{ cita.Hora }}</p>
                     <p class="card-text"><i class="fas fa-clipboard"></i> Trámite: {{ cita.TipoTramite }}</p>
                     <p class="card-text"><i class="fas fa-map-marker-alt"></i> Módulo: {{ cita.Modulo }}</p>
+                    <p class="card-text" [ngClass]="{ 'text-danger': cita.EstadoCita === 'Rechazado', 'text-success': cita.EstadoCita === 'Validado' }">
+                      <i class="fas fa-info-circle"></i> Estado del trámite: {{ cita.EstadoCita }}
+                    </p>
+                    <span *ngIf="cita.EstadoCita === 'Rechazado'">La cita fue rechazada debido a que no cumple con los requisitos mencionados. Intente de nuevo con una nueva cita.</span>
+                    <span *ngIf="cita.EstadoCita === 'Validado'">El tramite fue validado y confirmado por el administrador, puede continuar con el tramite en la seccion de tramites.</span>
                   </div>
                 </div>
               </div>
@@ -190,6 +195,8 @@
                     <th>Hora</th>
                     <th>Trámite</th>
                     <th>Módulo</th>
+                    <th>Estado de la cita</th>
+                    <th>Pagar</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -206,14 +213,18 @@
                     <td>
                       <i class="fas fa-map-marker-alt"></i> {{ cita.Modulo }}
                     </td>
+                    <td>
+                      <i class="fas fa-info-circle" [ngStyle]="{'color': cita.EstadoCita === 'Validado' ? 'green' : (cita.EstadoCita === 'Rechazado' ? 'red' : 'black')}"></i> {{cita.EstadoCita}}
+                    </td>
+                    <td>
+                      <i [routerLink]="['/Pagoprincipal', cita.idUsuario]" class="fas fa-edit text-primary"></i>
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </ng-container>
         </div>
-        
-        
       </div>
     </div>
     

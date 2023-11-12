@@ -28,6 +28,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PanelusuarioComponent } from './components/panelusuario/panelusuario.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { AdminVistaCitaComponent } from './components/admin-vista-cita/admin-vista-cita.component';
+import { ValidarCitaComponent } from './components/validar-cita/validar-cita.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     PanelusuarioComponent,
     ChatbotComponent,
     PagenotfoundComponent,
+    AdminVistaCitaComponent,
+    ValidarCitaComponent,
   
   ],
   imports: [

@@ -13,6 +13,8 @@ import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denunc
 import { PanelusuarioComponent } from './components/panelusuario/panelusuario.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { AdminVistaCitaComponent } from './components/admin-vista-cita/admin-vista-cita.component';
+import { ValidarCitaComponent } from './components/validar-cita/validar-cita.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent}, // home principal
@@ -27,7 +29,10 @@ const routes: Routes = [
   {path: 'Pagoefectivo',component: PagoEeComponent},
   {path: 'mi-cuenta',component: PanelusuarioComponent},
   {path: 'chatbot',component:ChatbotComponent},
+  {path: 'citas-usuarios',component:AdminVistaCitaComponent},
+  {path: 'validar-citas/:id',component:ValidarCitaComponent},
   {path:'**',component:PagenotfoundComponent}, // Si no existe la ruta, que todo lo retorne a principal
+  {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({

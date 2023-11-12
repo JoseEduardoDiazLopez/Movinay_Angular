@@ -31,7 +31,7 @@ export class TabsComponent {
       Modulo :['', Validators.required],
       TipoTramite: ['', Validators.required],
       idUsuario: ['', Validators.required],
-      idOficina:['', Validators.required]
+      EstadoCita:['', Validators.required]
     })
     this.id = this.aRouter.snapshot.paramMap.get('id')!;
   }
@@ -64,7 +64,7 @@ export class TabsComponent {
       Modulo: this.tabsForm.get('Modulo')?.value,
       TipoTramite: this.tabsForm.get('TipoTramite')?.value,
       idUsuario: this.tabsForm.get('idUsuario')?.value,
-      idOficina: this.tabsForm.get('idOficina')?.value
+      EstadoCita: this.tabsForm.get('EstadoCita')?.value
     }
     const camposParaRestablecer = {
       Modulo: '',
@@ -75,7 +75,7 @@ export class TabsComponent {
     if(this.id !== null){
       this._CitasService.editarCitas(this.id, CITAS).subscribe(data =>{
         this.toastr.info('Se actualizó la cita.','Cita actualizada!');
-        this.router.navigate(['/new-cita']);
+        this.router.navigate(['/mi-cuenta']);
         this.tabsForm.reset()
         this.ngOnInit()
       }, error => {
@@ -89,7 +89,7 @@ export class TabsComponent {
       console.log(CITAS);
       this._CitasService.guardarCitas(CITAS).subscribe(data =>{
         this.toastr.success('Se inserto una nueva cita..','Cita insertada!');
-        this.router.navigate(['/new-cita']);
+        this.router.navigate(['/mi-cuenta']);
         this.tabsForm.reset()
         this.ngOnInit()
       }, error=>{

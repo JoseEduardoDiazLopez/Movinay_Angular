@@ -6,15 +6,15 @@ export class Citas{
     Modulo: string;
     TipoTramite: string;
     idUsuario: string;
-    idOficina: number;
+    EstadoCita: string;
     constructor (idcita: number, fecha: string, hora: string, modulo: string,
-        tipoTramite: string, idusuario: string, idoficina:number){
+        tipoTramite: string, idusuario: string, estadocita:string){
         this.idCita = idcita;
         this.Fecha = fecha;
         this.Hora = hora;
         this.Modulo = modulo;
         this.TipoTramite = tipoTramite;
         this.idUsuario = idusuario;
-        this.idOficina = idoficina;
+        this.EstadoCita= estadocita;
     }
 }

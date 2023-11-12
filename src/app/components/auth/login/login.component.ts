@@ -10,17 +10,29 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  registerUserr: User = new User('',''); // Initialize an empty User object for registration
-  loginUserr: User = new User('','');    // Initialize an empty User object for login
+  registerUserr: User = new User("","","","","","","",""); // Initialize an empty User object for registration
+  loginUserr: User = new User("","","","","","","","");    // Initialize an empty User object for login
   resetFields() {
     this.registerUserr = {
       username: '',
-      password: ''
+      password: '',
+      email: '',
+      RFC: '',
+      nombre: '',
+      ApellidoPaterno: '',
+      ApellidoMaterno: '',
+      FechaNac : ''
     };
   
     this.loginUserr = {
       username: '',
-      password: ''
+      password: '',
+      email: '',
+      RFC: '',
+      nombre: '',
+      ApellidoPaterno: '',
+      ApellidoMaterno: '',
+      FechaNac : ''
     };
   }
   constructor(private authService: AuthService,private toastr: ToastrService,private router: Router) { }
