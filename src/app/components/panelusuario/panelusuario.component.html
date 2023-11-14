@@ -11,6 +11,7 @@
             <li class="list-group-item" (click)="showComponent('pagos')">PAGOS</li>
             <li class="list-group-item" (click)="showComponent('denuncias')">DENUNCIAS</li>
             <li class="list-group-item" (click)="showComponent('usuarios')">USUARIOS</li>
+            <li class="list-group-item" (click)="showComponent('documentos')">MIS DOCUMENTOS</li>
             <li class="list-group-item">
               <a [routerLink]="['/home']">REGRESAR PAGINA PRINCIPAL</a>
             </li>
@@ -33,6 +34,9 @@
       </ng-container>
       <ng-container *ngIf="currentComponent === 'usuarios'">
         <app-admin-vista-cita></app-admin-vista-cita>
+      </ng-container>
+      <ng-container *ngIf="currentComponent === 'documentos'">
+        <app-documentacion></app-documentacion>
       </ng-container>
     </div>
   </div>

@@ -15,6 +15,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { AdminVistaCitaComponent } from './components/admin-vista-cita/admin-vista-cita.component';
 import { ValidarCitaComponent } from './components/validar-cita/validar-cita.component';
+import { DocumentacionComponent } from './components/documentacion/documentacion.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent}, // home principal
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: 'chatbot',component:ChatbotComponent},
   {path: 'citas-usuarios',component:AdminVistaCitaComponent},
   {path: 'validar-citas/:id',component:ValidarCitaComponent},
+  {path: 'mis-documentos',component:DocumentacionComponent},
   {path:'**',component:PagenotfoundComponent}, // Si no existe la ruta, que todo lo retorne a principal
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];
