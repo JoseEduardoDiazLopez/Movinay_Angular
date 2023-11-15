@@ -1,0 +1,24 @@
+<div *ngFor="let usuario of listarUsuario">
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <!-- Espacio para la foto -->
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" class="img-fluid rounded-circle" alt="Foto de perfil">
+          </div>
+          <div class="col-md-8">
+            <!-- Detalles del perfil -->
+            <h4 class="card-title">Nombre del usuario:{{ usuario.nombre }}</h4>
+            <p class="card-text">Apellido Paterno: {{ usuario.ApellidoPaterno }}</p>
+            <p class="card-text">Apellido Materno: {{ usuario.ApellidoMaterno }}</p>
+            <p class="card-text">RFC: {{ usuario.RFC }}</p>
+            <p class="card-text">Fecha de Nacimiento: {{ usuario.FechaNac }}</p>
+            <p class="card-text">Username: {{ usuario.username }}</p>
+            <!-- Agrega más campos según tus necesidades -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

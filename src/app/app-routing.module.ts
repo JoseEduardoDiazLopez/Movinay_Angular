@@ -16,6 +16,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { AdminVistaCitaComponent } from './components/admin-vista-cita/admin-vista-cita.component';
 import { ValidarCitaComponent } from './components/validar-cita/validar-cita.component';
 import { DocumentacionComponent } from './components/documentacion/documentacion.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent}, // home principal
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: 'citas-usuarios',component:AdminVistaCitaComponent},
   {path: 'validar-citas/:id',component:ValidarCitaComponent},
   {path: 'mis-documentos',component:DocumentacionComponent},
+  {path: 'mi-perfil/:id',component:PerfilComponent},
   {path:'**',component:PagenotfoundComponent}, // Si no existe la ruta, que todo lo retorne a principal
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];

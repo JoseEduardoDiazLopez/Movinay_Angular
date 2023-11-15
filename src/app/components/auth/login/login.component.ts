@@ -21,7 +21,7 @@ export class LoginComponent {
       nombre: '',
       ApellidoPaterno: '',
       ApellidoMaterno: '',
-      FechaNac : ''
+      FechaNac : '',
     };
   
     this.loginUserr = {
@@ -32,7 +32,7 @@ export class LoginComponent {
       nombre: '',
       ApellidoPaterno: '',
       ApellidoMaterno: '',
-      FechaNac : ''
+      FechaNac : '',
     };
   }
   constructor(private authService: AuthService,private toastr: ToastrService,private router: Router) { }
