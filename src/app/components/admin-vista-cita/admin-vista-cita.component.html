@@ -1,35 +1,50 @@
 <ng-container *ngIf="listarCitas.length > 0">
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Trámite</th>
-            <th>Módulo</th>
-            <th>Aceptar tramite</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let cita of listarCitas">
-            <td>
-              <i class="far fa-calendar-alt"></i> {{ cita.Fecha | date:'dd/MM/yyyy' }}
-            </td>
-            <td>
-              <i class="far fa-clock"></i> {{ cita.Hora }}
-            </td>
-            <td>
-              <i class="fas fa-clipboard"></i> {{ cita.TipoTramite }}
-            </td>
-            <td>
-              <i class="fas fa-map-marker-alt"></i> {{ cita.Modulo }}
-            </td>
-            <td>
-                <i [routerLink]="['/validar-citas', cita._id]" class="fas fa-edit text-primary"></i>
+  <html>
+    <head> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-left">Citas</h1>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="table-tinto">
+            <tr>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Trámite</th>
+              <th>Módulo</th>
+              <th>Aceptar tramite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cita of listarCitas">
+              <td>
+                <i class="far fa-calendar-alt"></i>
+                {{ cita.Fecha | date : "dd/MM/yyyy" }}
+              </td>
+              <td><i class="far fa-clock"></i> {{ cita.Hora }}</td>
+              <td><i class="fas fa-clipboard"></i> {{ cita.TipoTramite }}</td>
+              <td><i class="fas fa-map-marker-alt"></i> {{ cita.Modulo }}</td>
+              <td>
+                <i
+                  [routerLink]="['/validar-citas', cita._id]"
+                  class="fas fa-edit text-primary"
+                ></i>
                 <!--<i (click)="eliminarCita(cita._id)"class="fas fa-trash-alt text-danger"></i>-->
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </ng-container>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </body>
+  </html>
+</ng-container>

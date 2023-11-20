@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as stringSimilarity from 'string-similarity';
+//import * as stringSimilarity from 'string-similarity';
 @Component({
   selector: 'app-chatbot',
   templateUrl: './chatbot.component.html',

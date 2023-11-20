@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3 d-flex flex-column justify-content-between" style="height: 100vh;">
+    <div class="col-2 d-flex flex-column" style="height: 100vh;">
       <div>
         <div class="sidebar">
           <h3>Panel MoviNay</h3>
@@ -19,7 +19,8 @@
         </div>
       </div>
     </div>
-    <div class="col-9 d-flex justify-content-center align-items-center">
+
+    <div class="col-10 d-flex flex-column">
       <ng-container *ngIf="currentComponent === 'citas'">
         <app-citas-c></app-citas-c>
       </ng-container>
@@ -38,6 +39,6 @@
       <ng-container *ngIf="currentComponent === 'documentos'">
         <app-documentacion></app-documentacion>
       </ng-container>
-    </div>
+    </div>    
   </div>
 </div>
