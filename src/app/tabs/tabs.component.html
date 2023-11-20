@@ -176,8 +176,11 @@
                     <p class="card-text" [ngClass]="{ 'text-danger': cita.EstadoCita === 'Rechazado', 'text-success': cita.EstadoCita === 'Validado' }">
                       <i class="fas fa-info-circle"></i> Estado del trámite: {{ cita.EstadoCita }}
                     </p>
+                    <span *ngIf="cita.EstadoCita === 'En proceso'"> Gracias por agendar tu cita virtual. Se estima que el tiempo estimado de la aprobación a la cita es de 1 día como máximo. Por favor, intente más tarde.</span>
                     <span *ngIf="cita.EstadoCita === 'Rechazado'">La cita fue rechazada debido a que no cumple con los requisitos mencionados. Intente de nuevo con una nueva cita.</span>
                     <span *ngIf="cita.EstadoCita === 'Validado'">El tramite fue validado y confirmado por el administrador, puede continuar con el tramite en la seccion de tramites.</span>
+                    <br>
+                    <span *ngIf="cita.EstadoCita === 'Validado'">Su turno es el número  {{cita.Turno}}.</span>
                   </div>
                 </div>
               </div>
@@ -196,7 +199,6 @@
                     <th>Trámite</th>
                     <th>Módulo</th>
                     <th>Estado de la cita</th>
-                    <th>Pagar</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -215,10 +217,11 @@
                     </td>
                     <td>
                       <i class="fas fa-info-circle" [ngStyle]="{'color': cita.EstadoCita === 'Validado' ? 'green' : (cita.EstadoCita === 'Rechazado' ? 'red' : 'black')}"></i> {{cita.EstadoCita}}
+                      <p  *ngIf="cita.EstadoCita === 'Validado'"> Su turno es: {{cita.Turno}}</p>
                     </td>
-                    <td>
+                    <!--<td>
                       <i [routerLink]="['/Pagoprincipal', cita.idUsuario]" class="fas fa-edit text-primary"></i>
-                    </td>
+                    </td>-->
                   </tr>
                 </tbody>
               </table>

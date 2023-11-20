@@ -15,8 +15,7 @@
   
   /* Estilos para los elementos de la lista del menú */
   .list-group-item {
-    background-image: linear-gradient(180deg, #f19583 0, #e68379 25%, #d86c6c 50%, #c95561 75%, #bd425b 100%);
-    border: none;
+    background-image: radial-gradient(circle at 50% 50%, #ee354e 0, #e1284f 16.67%, #d1184f 33.33%, #c0034e 50%, #af004c 66.67%, #9e004a 83.33%, #8f0048 100%);    border: none;
     color: white;
     font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
   }
@@ -27,14 +26,13 @@
   }
   
   .list-group-item a:hover {
-    color: #0056b3; /* Cambia el color al pasar el ratón por encima */
+    color: #64676b; /* Cambia el color al pasar el ratón por encima */
   }
   
   /* Estilos para la barra lateral */
   .sidebar {
     height: 100vh;
-    background-image: linear-gradient(180deg, #f19583 0, #e68379 25%, #d86c6c 50%, #c95561 75%, #bd425b 100%); /* Cambia los colores según tu preferencia */
-    color: white;
+    background-image: radial-gradient(circle at 50% 50%, #ee354e 0, #e1284f 16.67%, #d1184f 33.33%, #c0034e 50%, #af004c 66.67%, #9e004a 83.33%, #8f0048 100%);    color: white;
     position: fixed;
     top: 0;
     left: 0;

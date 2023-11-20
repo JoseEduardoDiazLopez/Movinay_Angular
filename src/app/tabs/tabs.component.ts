@@ -64,7 +64,8 @@ export class TabsComponent {
       Modulo: this.tabsForm.get('Modulo')?.value,
       TipoTramite: this.tabsForm.get('TipoTramite')?.value,
       idUsuario: this.tabsForm.get('idUsuario')?.value,
-      EstadoCita: this.tabsForm.get('EstadoCita')?.value
+      EstadoCita: this.tabsForm.get('EstadoCita')?.value,
+      Turno: this.tabsForm.get('null')?.value
     }
     const camposParaRestablecer = {
       Modulo: '',

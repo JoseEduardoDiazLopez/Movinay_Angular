@@ -31,6 +31,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { AdminVistaCitaComponent } from './components/admin-vista-cita/admin-vista-cita.component';
 import { ValidarCitaComponent } from './components/validar-cita/validar-cita.component';
 import { DocumentacionComponent } from './components/documentacion/documentacion.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { DocumentacionComponent } from './components/documentacion/documentacion
     AdminVistaCitaComponent,
     ValidarCitaComponent,
     DocumentacionComponent,
+    PerfilComponent
   
   ],
   imports: [
