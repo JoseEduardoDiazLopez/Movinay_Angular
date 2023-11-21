@@ -35,8 +35,8 @@ const routes: Routes = [
   {path: 'validar-citas/:id',component:ValidarCitaComponent},
   {path: 'mis-documentos',component:DocumentacionComponent},
   {path: 'mi-perfil/:id',component:PerfilComponent},
-  {path:'**',component:PagenotfoundComponent}, // Si no existe la ruta, que todo lo retorne a principal
-  {path: '**', redirectTo: 'home', pathMatch: 'full'}
+  {path:'error',component:PagenotfoundComponent}, // Si no existe la ruta, que todo lo retorne a principal
+  {path: '**', redirectTo: 'error', pathMatch: 'full'}
 ];
 
 @NgModule({

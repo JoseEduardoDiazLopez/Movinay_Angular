@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Toast, ToastrService } from 'ngx-toastr';
 import { Citas } from 'src/app/models/citas';
 import { CitasService } from 'src/app/services/citas.service';
-
 @Component({
   selector: 'app-validar-cita',
   templateUrl: './validar-cita.component.html',
@@ -11,14 +10,42 @@ import { CitasService } from 'src/app/services/citas.service';
 })
 export class ValidarCitaComponent {
   idCita: string;
-
+  listarCitas: Citas[] = [];
+  cita: Citas = {
+    idCita: 0,
+    Fecha: '',
+    Hora: '',
+    Modulo: '',
+    TipoTramite: '',
+    idUsuario: '',
+    EstadoCita: '',
+    Turno : ''
+  };
   constructor(private route: ActivatedRoute, private citasService: CitasService, private toast:ToastrService, private router:Router) {
     this.idCita = ''; // Inicializa el idCita
 
     this.route.params.subscribe(params => {
       this.idCita = this.route.snapshot.paramMap.get('id')!;
     });
+   
+}
+ngOnInit() {
+  this.obtenerCitasU()
+}
+obtenerCitasU() {
+  const idCitaAsNumber = Number(this.idCita);
+
+  if (!isNaN(idCitaAsNumber)) {
+    this.citasService.consultarCitas(idCitaAsNumber).subscribe((data: Citas[]) => {
+      console.log(data);
+      this.listarCitas = data;
+    }, (error: any) => {
+      console.log(error);
+    });
+  } else {
+    console.error('Error: El ID de la cita no es un número válido.');
   }
+}
 
   validarCita() {
     if (this.idCita) {
