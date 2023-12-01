@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0; /* Eliminar el margen predeterminado del cuerpo */
     padding: 0; /* Eliminar el relleno predeterminado del cuerpo */
+    height: auto;
   }
   
   .container {
