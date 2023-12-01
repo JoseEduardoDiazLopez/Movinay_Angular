@@ -22,8 +22,8 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { NavComponent } from './components/nav/nav.component';
 import { CommonModule } from '@angular/common';
 import { PagoEpComponent } from './components/pago-ep/pago-ep.component';
-import { PagoEtComponent } from './components/pago-et/pago-et.component';
-import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
+//import { PagoEtComponent } from './components/pago-et/pago-et.component';
+//import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PanelusuarioComponent } from './components/panelusuario/panelusuario.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
@@ -47,8 +47,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     RegisterComponent,
     NavComponent,
     PagoEpComponent,
-    PagoEtComponent,
-    PagoEeComponent,
+    //PagoEtComponent,
+    //PagoEeComponent,
     FooterComponent,
     PanelusuarioComponent,
     ChatbotComponent,

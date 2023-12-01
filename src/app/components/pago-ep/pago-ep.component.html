@@ -1,27 +1,79 @@
 <app-nav></app-nav>
-  
-  <body>
-    <header>
-<div class="payment-container">
-    <div class="payment-form">
-      <h2>Selecciona un Método de Pago</h2>
-      <form>
-        <label name="Tar" routerLink="/Pagotarjeta">
-          <!--<input type="radio" name="payment-method" value="credit-card">--> 
-          <img src="../../assets/images/tarjetadc.png" routerLink = "/Pagotarjeta" alt="Tarjeta de Crédito o Débito">Tarjeta de Crédito o Débito
-          
-        </label>
-        <label name="pay" routerLink="/home">
-          <!--<input type="radio" name="payment-method" value="paypal">--> 
-          <img src="../../assets/images/paypal.png" routerLink = "/home" alt="PayPal"> Paypal
-        </label>
-        <label name="efec" routerLink="/Pagoefectivo">
-         <!--<input type="radio" name="payment-method" value="efect">--> 
-          <img src="../../assets/images/efectivo.png" routerLink = "/Pagoefectivo" alt="Efectivo"> Efectivo en puntos de pago
-        </label>
-        <!--<button class="pay-button" onclick="continueToPayment()">Continuar</button>-->
-      </form>
-    </div>
-  </div>
 
-  <app-footer></app-footer>
+<body>
+  
+  <form >
+  <header id="formPagoSeleccion" >
+    <link rel="stylesheet" href="pago-ep.component.css"> <!-- Enlaza tu archivo de CSS -->
+
+    <div class="payment-container">
+      <div class="payment-form">
+        <h2>Selecciona un Método de Pago</h2>
+        <form>
+          <label name="Tar" (click)="mostrarHeader('formPagoTarjeta')">
+            <img src="../../assets/images/tarjetadc.png" alt="TarjetaCreditoDebito"> Tarjeta de Crédito o Débito
+          </label>
+          <label name="pay" (click)="mostrarHeader('Opcion2')">
+            <img src="../../assets/images/paypal.png" alt="PayPal"> Paypal
+          </label>
+          <label name="efec" (click)="mostrarHeader('formPagoEfectivo')">
+            <img src="../../assets/images/efectivo.png" alt="Efectivo"> Efectivo en puntos de pago
+          </label>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <header id="formPagoTarjeta" style="display: none;">
+    <link rel="stylesheet" href="pago-et.component.css"> <!-- Enlaza tu archivo de CSS -->
+    <div class="payment-container">
+      <div class="payment-form">
+        <h2>Detalles de Pago</h2>
+        
+          <input type="text" placeholder="Concepto" required>
+          <input type="text" placeholder="Total a pagar" required>
+        
+      </div>
+    </div>
+
+    <div class="info-container">
+      <div class="info-form">
+        <h2>Tarjeta de Crédito/Débito</h2>
+        
+          <input type="text" placeholder="Número de tarjeta" required>
+          <input type="text" placeholder="Nombre en la tarjeta" required>
+          <input type="text" placeholder="Fecha de vencimiento (MM/AA)" required>
+          <input type="text" placeholder="CVV" required>
+          <button class="pay-button">Pagar Ahora</button>
+        
+      </div>
+    </div>
+  </header>
+
+  <header id="formPagoEfectivo" style="display: none;">
+    <link rel="stylesheet" href="pago-ee.component.css"> <!-- Enlaza tu archivo de CSS -->
+    <div class="payment-container">
+      <div class="payment-form">
+        <h2>¿Dónde quieres pagar?...</h2>
+        
+          <label name="Tar" onclick="mostrarHeader('Opcion1')">
+            <img src="../../assets/images/oxxo.png" alt="Oxxo"> Oxxo
+          </label>
+          <label name="pay" onclick="mostrarHeader('Opcion2')">
+            <img src="../../assets/images/eleven.png" alt="Eleven"> 7-Eleven
+          </label>
+          <label name="efec" onclick="mostrarHeader('Opcion3')">
+            <img src="../../assets/images/farmacia.png" alt="Farmacias"> Farmacias del Ahorro
+          </label>
+        
+      </div>
+    </div>
+  </header>
+
+  
+</form>
+
+ 
+  
+</body>
+<app-footer></app-footer>

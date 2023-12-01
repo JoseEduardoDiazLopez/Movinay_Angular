@@ -7,8 +7,8 @@ import { TramitesComponent } from './components/tramites/tramites.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { PagoEpComponent } from './components/pago-ep/pago-ep.component';
-import { PagoEtComponent } from './components/pago-et/pago-et.component';
-import { PagoEeComponent } from './components/pago-ee/pago-ee.component';
+//import { PagoEtComponent } from './components/pago-et/pago-et.component';
+//import { PagoEeComponent } from './components/pago-ep/pago-ep.component';
 import { CrearDenunciaComponent } from './components/crear-denuncia/crear-denuncia.component';
 import { PanelusuarioComponent } from './components/panelusuario/panelusuario.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
@@ -27,8 +27,8 @@ const routes: Routes = [
   {path: 'sesion',component: LoginComponent},
   {path: 'registro',component: RegisterComponent},
   {path: 'Pagoprincipal',component: PagoEpComponent},
-  {path: 'Pagotarjeta',component: PagoEtComponent},
-  {path: 'Pagoefectivo',component: PagoEeComponent},
+  //{path: 'Pagotarjeta',component: PagoEtComponent},
+  //{path: 'Pagoefectivo',component: PagoEeComponent},
   {path: 'mi-cuenta',component: PanelusuarioComponent},
   {path: 'chatbot',component:ChatbotComponent},
   {path: 'citas-usuarios',component:AdminVistaCitaComponent},
