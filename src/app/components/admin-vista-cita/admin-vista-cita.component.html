@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <h1 class="text-left">Citas</h1>
+            <h1 class="text-left">Tramites</h1>
           </div>
         </div>
       </div>
@@ -24,7 +24,7 @@
               <th class="text-white">Trámite</th>
               <th class="text-white">Módulo</th>
               <th class="text-white">Estado de la cita</th>
-              <th class="text-white">Finalizar</th>
+              <th class="text-white">Confirmar Cita</th>
             </tr>
           </thead>
           <tbody>
@@ -39,7 +39,7 @@
               <td class="text-white"><i class="fas fa-map-marker-alt"></i> {{ cita.Modulo }}</td>
               <td class="text-white">{{cita.EstadoCita}}</td>
               <td class="text-white">
-                <i [routerLink]="['/validar-citas', cita._id]" class="fas fa-check-circle text-primary"></i>
+                Confirmar-> <i [routerLink]="['/validar-citas', cita._id]" class="fas fa-check-circle text-primary"></i>
                 <!--<i (click)="eliminarCita(cita._id)" class="fas fa-trash-alt text-danger"></i>-->
               </td>
             </tr>

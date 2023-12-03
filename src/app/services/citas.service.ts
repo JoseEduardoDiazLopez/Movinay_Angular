@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Citas } from '../models/citas'
+import { AuthService } from './auth.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -31,6 +33,6 @@ export class CitasService {
     return this.http.get<Citas>(this.URL + id);
   }
   actualizarEstadoCita(id: string, estado: string): Observable<any> {
-    return this.http.put(`${this.URL}${id}/validar`, { EstadoCita: estado });
+    return this.http.put(`${this.URL}${id}/validar`, { EstadoCita: estado});
   }
 }

@@ -194,7 +194,7 @@
         </div>
         <div class="card-body">
           <br>
-          <ng-container *ngIf="listarCitas.length > 0">
+          <ng-container *ngIf="listarCitas.length > 0; else noCitas">
             <div class="row">
               <div class="col-md-4 mb-3" *ngFor="let cita of listarCitas">
                 <div class="card cita-card">
@@ -216,6 +216,9 @@
               </div>
             </div>
           </ng-container>
+          <ng-template #noCitas>
+            <div class="alert alert-info">No tienes citas disponibles en este momento.</div>
+          </ng-template>
         </div>
         <br>
         <div class="card-body">

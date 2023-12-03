@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Toast, ToastrService } from 'ngx-toastr';
 import { Citas } from 'src/app/models/citas';
+import { AuthService } from 'src/app/services/auth.service';
 import { CitasService } from 'src/app/services/citas.service';
 @Component({
   selector: 'app-validar-cita',
@@ -11,6 +12,7 @@ import { CitasService } from 'src/app/services/citas.service';
 export class ValidarCitaComponent {
   idCita: string;
   listarCitas: Citas[] = [];
+  guardarId!: number;
   cita: Citas = {
     idCita: 0,
     Fecha: '',
@@ -21,9 +23,9 @@ export class ValidarCitaComponent {
     EstadoCita: '',
     Turno : ''
   };
-  constructor(private route: ActivatedRoute, private citasService: CitasService, private toast:ToastrService, private router:Router) {
+  constructor(private route: ActivatedRoute, private citasService: CitasService, private toast:ToastrService, private router:Router,  private authService: AuthService) {
     this.idCita = ''; // Inicializa el idCita
-
+    this.guardarId = this.authService.getUserId();
     this.route.params.subscribe(params => {
       this.idCita = this.route.snapshot.paramMap.get('id')!;
     });

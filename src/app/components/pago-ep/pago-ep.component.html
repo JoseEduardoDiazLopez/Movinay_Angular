@@ -1,79 +1,60 @@
-<app-nav></app-nav>
-
-<body>
-  
-  <form >
-  <header id="formPagoSeleccion" >
-    <link rel="stylesheet" href="pago-ep.component.css"> <!-- Enlaza tu archivo de CSS -->
-
-    <div class="payment-container">
-      <div class="payment-form">
-        <h2>Selecciona un Método de Pago</h2>
-        <form>
-          <label name="Tar" (click)="mostrarHeader('formPagoTarjeta')">
-            <img src="../../assets/images/tarjetadc.png" alt="TarjetaCreditoDebito"> Tarjeta de Crédito o Débito
-          </label>
-          <label name="pay" (click)="mostrarHeader('Opcion2')">
-            <img src="../../assets/images/paypal.png" alt="PayPal"> Paypal
-          </label>
-          <label name="efec" (click)="mostrarHeader('formPagoEfectivo')">
-            <img src="../../assets/images/efectivo.png" alt="Efectivo"> Efectivo en puntos de pago
-          </label>
-        </form>
-      </div>
-    </div>
-  </header>
-
-  <header id="formPagoTarjeta" style="display: none;">
-    <link rel="stylesheet" href="pago-et.component.css"> <!-- Enlaza tu archivo de CSS -->
-    <div class="payment-container">
-      <div class="payment-form">
-        <h2>Detalles de Pago</h2>
-        
-          <input type="text" placeholder="Concepto" required>
-          <input type="text" placeholder="Total a pagar" required>
-        
-      </div>
-    </div>
-
-    <div class="info-container">
-      <div class="info-form">
-        <h2>Tarjeta de Crédito/Débito</h2>
-        
-          <input type="text" placeholder="Número de tarjeta" required>
-          <input type="text" placeholder="Nombre en la tarjeta" required>
-          <input type="text" placeholder="Fecha de vencimiento (MM/AA)" required>
-          <input type="text" placeholder="CVV" required>
-          <button class="pay-button">Pagar Ahora</button>
-        
-      </div>
-    </div>
-  </header>
-
-  <header id="formPagoEfectivo" style="display: none;">
-    <link rel="stylesheet" href="pago-ee.component.css"> <!-- Enlaza tu archivo de CSS -->
-    <div class="payment-container">
-      <div class="payment-form">
-        <h2>¿Dónde quieres pagar?...</h2>
-        
-          <label name="Tar" onclick="mostrarHeader('Opcion1')">
-            <img src="../../assets/images/oxxo.png" alt="Oxxo"> Oxxo
-          </label>
-          <label name="pay" onclick="mostrarHeader('Opcion2')">
-            <img src="../../assets/images/eleven.png" alt="Eleven"> 7-Eleven
-          </label>
-          <label name="efec" onclick="mostrarHeader('Opcion3')">
-            <img src="../../assets/images/farmacia.png" alt="Farmacias"> Farmacias del Ahorro
-          </label>
-        
-      </div>
-    </div>
-  </header>
-
-  
-</form>
-
- 
-  
-</body>
-<app-footer></app-footer>
+    <form class="mt-5" [formGroup]="tabsForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+        <input type="text" 
+                formControlName="idUsuario"
+                class="form-control"
+                placeholder="idUsuario"
+                [value]="guardarId"
+                [readonly]="true">
+        </div>
+    
+        <div class="card-header primary">
+        <h2>Selecciona un método de pago disponible </h2>
+        </div>
+    
+        <div class="mb-3">
+        <select class="form-control" formControlName="TipoPago" placeholder="TipoPago">
+            <option value="Tarjeta de credito">Tarjeta de Crédito / Debito</option>
+            <option value="Efectivo">Efectivo</option>
+        </select>
+        </div>
+    
+        <div class="mb-3">
+            <div class="card-header primary">
+                <h2>Seleccione el tramite que desea pagar</h2>
+            </div>
+        <select class="form-control" formControlName="Concepto" placeholder="Concepto" (change)="onConceptoSeleccionado()">
+            <option *ngFor="let concepto of tiposTramite" [value]="concepto">{{ concepto }}</option>
+        </select>
+        </div>
+        <div class="mb-3">
+            <div class="card-header primary">
+            <h2>Costo del trámite</h2>
+            </div>
+            <input type="text" 
+            formControlName="Cantidad"
+            class="form-control"
+            placeholder="Cantidad"
+            value="Cantidad"
+            [readonly]="true">
+        </div>
+        <div *ngIf="tabsForm.get('TipoPago')?.value === 'Tarjeta de credito'">
+        <div class="mb-3">
+            <label for="numTarjeta">Número de Tarjeta:</label>
+            <input type="text" class="form-control" formControlName="numTarjeta" placeholder="Número de Tarjeta">
+        </div>
+        <div class="mb-3">
+            <label for="nombreTarjeta">Nombre del Titular de la tarjeta:</label>
+            <input type="text" class="form-control" formControlName="nombreTarjeta" placeholder="Nombre del titular (Ejemplo: MARCO A CHAVEZ)">
+        </div>
+        <div class="mb-3">
+            <label for="FechaTarjeta">Fecha de vencimiento. Formato: (MM/AA)</label>
+            <input type="text" class="form-control" formControlName="FechaTarjeta" placeholder="Fecha de vencimiento (Detrás de tu tarjeta, Ejemplo: 24/30)">
+        </div>
+        <div class="mb-3">
+            <label for="CVV">CVV:</label>
+            <input type="text" class="form-control" formControlName="CVV" placeholder="CVV (Son los trés numeros detrás de tu tarjeta)">
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Pagar Servicio</button>
+    </form>
