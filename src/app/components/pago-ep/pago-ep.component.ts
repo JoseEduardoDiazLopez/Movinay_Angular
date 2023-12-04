@@ -25,6 +25,7 @@ export class PagoEpComponent {
   tiposTramite: string[] = [];
   listarCostoTramites: Tramites[]=[];
   conceptoSeleccionado: string | null = null;
+  EstadoPago: string = "Por confirmar.";
   constructor(private authService: AuthService,private router: Router, private fb : FormBuilder, private aRouter: ActivatedRoute
     , private paymentService: PaymentService, private tramiteService: TramitesService,private toastr: ToastrService){
     this.tabsForm = this.fb.group({
@@ -106,6 +107,7 @@ export class PagoEpComponent {
         nombreTarjeta: this.tabsForm.get('nombreTarjeta')?.value,
         FechaTarjeta: this.tabsForm.get('FechaTarjeta')?.value,
         CVV: this.tabsForm.get('CVV')?.value,
+        EstadoPago : this.EstadoPago
       }
       this.paymentService.completarInformacionPago(this.guardarId!, Pagos).subscribe(data =>{
         this.toastr.info('Se envio para pagar.','Pago por confirmar!');

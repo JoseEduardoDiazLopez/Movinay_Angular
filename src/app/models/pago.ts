@@ -9,6 +9,7 @@ export class Pago {
     nombreTarjeta: string;
     FechaTarjeta: string;
     CVV: string;
+    EstadoPago: string;
     constructor(
       idPago: number,
       idUsuario: string,
@@ -19,7 +20,8 @@ export class Pago {
       numTarjeta: string,
       nombreTarjeta: string,
       FechaTarjeta: string,
-      CVV: string
+      CVV: string,
+      EstadoPago: string
     ){
       this.idPago = idPago;
       this.idUsuario = idUsuario;
@@ -31,6 +33,7 @@ export class Pago {
       this.nombreTarjeta = nombreTarjeta;
       this.FechaTarjeta = FechaTarjeta;
       this.CVV = CVV;
+      this.EstadoPago = EstadoPago;
     }
   }
   
