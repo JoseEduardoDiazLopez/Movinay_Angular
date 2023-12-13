@@ -6,10 +6,10 @@ import { Observable, catchError, map, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class PaymentService {
-   URL='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/payment/idUsuario/';
-   URLApi='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/payment';
-  //URL='http://localhost:3000/api/payment/idUsuario/'
-  //URLApi = "http://localhost:3000/api/payment";
+   //URL='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/payment/idUsuario/';
+   //URLApi='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/payment';
+  URL='http://localhost:3000/api/payment/idUsuario/'
+  URLApi = "http://localhost:3000/api/payment";
   constructor(private http: HttpClient) { }
   getTiposTramite(idUsuario: number): Observable<string[]> {
     return this.http.get<any>(`${this.URL}${idUsuario}`)

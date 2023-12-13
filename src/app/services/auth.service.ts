@@ -8,12 +8,14 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class AuthService {
+  /*
   URL1='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/register';
   URL2='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/login';
-  URL3='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/'
-  //URL1='http://localhost:3000/api/autenticacion/register';
- //URL2='http://localhost:3000/api/autenticacion/login';
- //URL3='http://localhost:3000/api/autenticacion';
+  URL3='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/autenticacion/'*/
+
+  URL1='http://localhost:3000/api/autenticacion/register';
+ URL2='http://localhost:3000/api/autenticacion/login';
+ URL3='http://localhost:3000/api/autenticacion';
   public currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
   public currentUser: Observable<User | null> = this.currentUserSubject.asObservable();
   public usuarioCad : string = '';
