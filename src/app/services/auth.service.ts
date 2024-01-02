@@ -16,6 +16,7 @@ export class AuthService {
   URL1='http://localhost:3000/api/autenticacion/register';
  URL2='http://localhost:3000/api/autenticacion/login';
  URL3='http://localhost:3000/api/autenticacion';
+ 
   public currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
   public currentUser: Observable<User | null> = this.currentUserSubject.asObservable();
   public usuarioCad : string = '';
