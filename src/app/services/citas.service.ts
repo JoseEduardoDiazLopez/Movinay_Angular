@@ -8,8 +8,8 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class CitasService {
-  //URL='https://movinaybackend-dev-zfap.2.ie-1.fl0.io/api/citas/';
-  URL='http://localhost:3000/api/citas/'
+  //URL=https://movinay-backendv4-dev-afmp.3.us-1.fl0.io/api/citas/';
+  URL='https://movinay-backendv4-dev-afmp.3.us-1.fl0.io/api/citas/'
   constructor(private http: HttpClient) { }
   getCitas(): Observable<any>{
     return this.http.get(this.URL);
